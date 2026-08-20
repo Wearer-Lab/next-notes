@@ -1,0 +1,18 @@
+# macOS build
+.build/
+*.app/
+*.xcuserdatad
+.DS_Store
+
+# Windows / .NET build
+[Bb]in/
+[Oo]bj/
+*.user
+.vs/
+artifacts/
+
+# Local ASR model weights. Large, redistributed under their own license, and every
+# platform fetches them itself — see docs/PARAKEET-WINDOWS.md.
+models/
+*.onnx
+*.nemo
