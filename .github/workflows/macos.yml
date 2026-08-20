@@ -24,6 +24,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Package.swift declares swift-tools-version 6.2, but the runner defaults to an
+      # older Xcode (Swift 6.1) and fails to even parse the manifest. Select the newest
+      # Xcode present rather than pinning a version that will age out of the image.
+      - name: Select the newest Xcode
+        run: |
+          latest=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          echo "Using $latest"
+          sudo xcode-select -s "$latest/Contents/Developer"
+
       - name: Swift version
         run: swift --version
 

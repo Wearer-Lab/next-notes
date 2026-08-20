@@ -44,6 +44,8 @@ public sealed class DictionaryCorrector
 
     private sealed record Rule(Regex Regex, string Replacement, string Trigger);
 
+    /// <summary>Compiles the enabled correction entries into an ordered rule set.</summary>
+    /// <param name="entries">The dictionary. Terms and disabled entries are ignored here.</param>
     public DictionaryCorrector(IEnumerable<DictionaryEntry> entries)
     {
         // Longest trigger first. Sorting by the trigger's length is what makes "Claude Code"
@@ -63,9 +65,11 @@ public sealed class DictionaryCorrector
             .ToList();
     }
 
+    /// <summary>True when no enabled correction entry produced a usable rule.</summary>
     public bool IsEmpty => _rules.Count == 0;
 
     /// <summary>Applies every rule in order.</summary>
+    /// <param name="text">Raw transcribed text.</param>
     /// <returns>The rewritten text, plus one entry per rule that fired.</returns>
     public (string Text, IReadOnlyList<AppliedCorrection> Applied) Apply(string text)
     {

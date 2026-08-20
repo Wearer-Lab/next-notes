@@ -19,8 +19,10 @@ public enum EntryKind
 /// <inheritdoc cref="EntryKind"/>
 public sealed record DictionaryEntry
 {
+    /// <summary>Stable identity, so an entry can be edited or deleted unambiguously.</summary>
     public Guid Id { get; init; } = Guid.NewGuid();
 
+    /// <summary>Which of the two kinds this entry is.</summary>
     public EntryKind Kind { get; init; }
 
     /// <summary>
@@ -41,9 +43,14 @@ public sealed record DictionaryEntry
     /// </summary>
     public bool IsEnabled { get; init; } = true;
 
+    /// <summary>A word or phrase the engine should know exists.</summary>
+    /// <param name="word">The correct spelling.</param>
     public static DictionaryEntry Term(string word) =>
         new() { Kind = EntryKind.Term, Write = word };
 
+    /// <summary>A mapping from a mishearing to the correct text.</summary>
+    /// <param name="hear">What the engine produces — the X in "when you hear X".</param>
+    /// <param name="write">What should be written instead.</param>
     public static DictionaryEntry Correction(string hear, string write) =>
         new() { Kind = EntryKind.Correction, Hear = hear, Write = write };
 
@@ -90,6 +97,9 @@ public sealed record DictionaryWarning(string Message)
 
     private static readonly char[] PhraseSeparators = [' ', '-', '\t'];
 
+    /// <summary>Checks an entry for patterns likely to fire on unintended text.</summary>
+    /// <param name="entry">The entry to inspect.</param>
+    /// <returns>Warnings to show the user, or empty if the entry looks safe.</returns>
     public static IReadOnlyList<DictionaryWarning> Check(DictionaryEntry entry)
     {
         // Only the trigger side can misfire. A Term is never matched against text.
