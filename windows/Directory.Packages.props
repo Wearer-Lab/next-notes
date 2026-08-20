@@ -1,0 +1,41 @@
+<Project>
+  <!--
+    Central package management. Every version is pinned deliberately — three of these
+    would silently break if taken at "latest", and we cannot test on Windows to find out.
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Speech. sherpa-onnx bundles its own ONNX Runtime; do NOT also reference
+         Microsoft.ML.OnnxRuntime or you will load two copies. -->
+    <PackageVersion Include="org.k2fsa.sherpa.onnx" Version="1.13.5" />
+    <PackageVersion Include="org.k2fsa.sherpa.onnx.runtime.win-x64" Version="1.13.5" />
+    <PackageVersion Include="org.k2fsa.sherpa.onnx.runtime.win-arm64" Version="1.13.5" />
+
+    <!-- Audio. PINNED TO 2.3.0 ON PURPOSE.
+         NAudio 3.x targets net9.0+ only and will not restore here. -->
+    <PackageVersion Include="NAudio" Version="2.3.0" />
+
+    <!-- UI. Avalonia rather than WPF: it is the only option that builds, runs and
+         UI-tests on macOS, which is where this app is being written. -->
+    <PackageVersion Include="Avalonia" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Desktop" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Skia" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Diagnostics" Version="11.3.20" />
+    <PackageVersion Include="Avalonia.Headless" Version="11.3.20" />
+    <!-- Avalonia.Headless.XUnit 12.x requires xUnit *v3*, a different package line.
+         11.3.x pairs with xUnit v2, which is what is referenced below. -->
+    <PackageVersion Include="Avalonia.Headless.XUnit" Version="11.3.20" />
+
+    <!-- Testing. Not FluentAssertions: 8.x is commercially licensed (~$130/dev/yr). -->
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="Shouldly" Version="4.3.0" />
+    <PackageVersion Include="NetArchTest.Rules" Version="1.3.2" />
+  </ItemGroup>
+</Project>

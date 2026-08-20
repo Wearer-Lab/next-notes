@@ -1,0 +1,87 @@
+name: Windows
+
+# The Windows app is written on a Mac and cannot be run here. CI is the only place it is
+# ever compiled against a real Windows SDK, so this workflow is the primary correctness
+# signal, not a formality — hence warnings-as-errors and the strictest analyzers available.
+
+on:
+  push:
+    branches: [main]
+    paths: ['windows/**', 'shared/**', '.github/workflows/windows.yml']
+  pull_request:
+    paths: ['windows/**', 'shared/**', '.github/workflows/windows.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+
+jobs:
+  build-test:
+    name: Build, analyze & test
+    runs-on: windows-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: windows
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: windows/global.json
+
+      - name: Environment
+        shell: pwsh
+        run: |
+          dotnet --info
+          Get-PSDrive -PSProvider FileSystem |
+            Select-Object Name, @{n='FreeGB';e={[math]::Round($_.Free/1GB,1)}}
+
+      - name: Restore
+        run: dotnet restore Murmur.sln
+
+      # --no-incremental is REQUIRED, not tidiness: Roslyn analyzer warnings are not
+      # re-emitted on an incremental build, so -warnaserror would pass on cached results
+      # and the whole gate would be theatre.
+      - name: Build (warnings are errors)
+        run: >
+          dotnet build Murmur.sln
+          --no-restore
+          --configuration Release
+          --no-incremental
+          -warnaserror
+          -bl:artifacts/build.binlog
+
+      - name: Test
+        run: >
+          dotnet test Murmur.sln
+          --no-build
+          --configuration Release
+          --logger "trx;LogFileName=results.trx"
+          --logger "console;verbosity=normal"
+          --results-directory artifacts/test-results
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: windows/artifacts/test-results
+          if-no-files-found: error
+
+      # A binlog is the single most useful artifact when a failure can't be reproduced
+      # locally — which, for this project, is every Windows failure.
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-binlog
+          path: windows/artifacts/build.binlog
+          if-no-files-found: ignore

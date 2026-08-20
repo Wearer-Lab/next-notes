@@ -64,7 +64,12 @@ public struct DictionaryCorrector: Sendable {
     public func apply(to text: String) -> (text: String, applied: [AppliedCorrection]) {
         guard !rules.isEmpty, !text.isEmpty else { return (text, []) }
 
-        var result = text
+        // Normalize to NFC before matching. macOS hands back decomposed (NFC vs NFD) strings
+        // in several places — a filesystem read of the dictionary being the obvious one — and
+        // "café" decomposed is five scalars where composed is four. The pattern and the text
+        // must be in the same form or an accented trigger silently never matches. The Windows
+        // implementation normalizes identically; this is part of the shared contract.
+        var result = text.precomposedStringWithCanonicalMapping
         var applied: [AppliedCorrection] = []
 
         for rule in rules {
@@ -106,7 +111,10 @@ public struct DictionaryCorrector: Sendable {
     /// requiring that no letter or digit sits on either side is the stricter guarantee, and
     /// it's what keeps "cloud code" off "Cloudflare".
     private static func makeRegex(for trigger: String) -> NSRegularExpression? {
+        // NFC here too, matching `apply(to:)` — a trigger typed into the UI and a trigger read
+        // back from the dictionary file can arrive in different normal forms.
         let parts = trigger
+            .precomposedStringWithCanonicalMapping
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .split(whereSeparator: { $0 == " " || $0 == "-" || $0 == "\t" })
             .map { NSRegularExpression.escapedPattern(for: String($0)) }
