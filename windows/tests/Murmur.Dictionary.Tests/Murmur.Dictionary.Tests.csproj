@@ -2,8 +2,17 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <!-- CA1062 (validate public args) is noise in a test project. -->
-    <NoWarn>$(NoWarn);CA1062</NoWarn>
+
+    <!-- Test projects are not a public API surface, so the rules that police one are pure
+         noise here. Relaxed deliberately and narrowly, in the test project only — the
+         library keeps the full strict set.
+           CS1591  documenting every [Fact] says nothing a reader doesn't already know
+           CA1707  Underscored_Test_Names are the near-universal xUnit convention
+           CA1716  a DTO named `Case` is clearer than one renamed to dodge a VB keyword
+           CA1062  argument validation on test helpers
+           CA1034  nested types are how xUnit fixtures are conventionally shaped -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CA1707;CA1716;CA1062;CA1034</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
