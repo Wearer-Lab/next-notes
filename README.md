@@ -8,22 +8,22 @@ Branding and the LLM cleanup tier are the next passes.
 
 ---
 
-## Not the other Murmur
+## Coexisting with another dictation app
 
-There is a separate, pre-existing app at `~/coding/whisper-flow-clone_2.20.26/Murmur.app`.
-**This project is unrelated to it and must never modify it.** Everything here is kept
-deliberately distinct so the two can't collide:
+This app is built to run alongside other dictation tools without colliding with them, which
+is not automatic on macOS and is worth understanding before changing anything:
 
-| | Existing Murmur | This project |
-|---|---|---|
-| Bundle ID | `com.murmur.client` | `ai.pivotstudio.murmur-youtube` |
-| Executable | `murmur` | `MurmurYouTube` |
-| Location | `~/coding/whisper-flow-clone_2.20.26/` | `~/Desktop/murmur-build/` |
+- **Bundle ID `ai.pivotstudio.murmur-youtube`** — TCC keys Accessibility and Microphone
+  grants to the bundle ID, so granting or revoking a permission here has no effect on any
+  other app, and vice versa.
+- **Executable `MurmurYouTube`** — distinct enough that `pkill -x MurmurYouTube` cannot
+  match a differently-named binary. The `Makefile` only ever targets `$(EXEC)`.
+- **Hotkey is configurable** (Right ⌥ / fn / Right ⌘) precisely because another tool may
+  already own the key you'd reach for first. The event tap inspects only its own keycode
+  and passes everything else through untouched.
 
-Separate bundle IDs mean separate TCC entries and separate preference domains — granting
-or revoking a permission for one has no effect on the other. The executable names differ
-in more than case, so `pkill -x MurmurYouTube` can never match `murmur`. The `Makefile`
-only ever targets `$(EXEC)`, never a bare `Murmur`.
+If you run more than one dictation app, give each a different push-to-talk key. Two apps on
+the same key both record, and whichever injects text will fight the other.
 
 ---
 
