@@ -60,7 +60,9 @@ public interface IHotkeySource : IDisposable
     bool Start();
 
     /// <summary>Stops listening.</summary>
-    void Stop();
+    /// <remarks>Not named <c>Stop</c>: that is a reserved word in VB, which CA1716 flags
+    /// on any interface member.</remarks>
+    void StopListening();
 }
 
 /// <summary>Types text into whatever application currently has focus.</summary>
@@ -86,6 +88,7 @@ public interface ITranscriber : IAsyncDisposable
     /// Dictionary terms to bias the recogniser toward. May be ignored by engines that don't
     /// support it — the correction pass is what actually guarantees spelling.
     /// </param>
+    /// <param name="cancellationToken">Cancels a transcription in flight.</param>
     ValueTask<string> TranscribeAsync(
         ReadOnlyMemory<float> samples,
         IReadOnlyList<string> biasPhrases,

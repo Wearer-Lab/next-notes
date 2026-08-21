@@ -91,7 +91,7 @@ public sealed class FakeHotkeySource : IHotkeySource
     public bool Start() { IsRunning = true; return true; }
 
     /// <inheritdoc />
-    public void Stop() => IsRunning = false;
+    public void StopListening() => IsRunning = false;
 
     /// <summary>Raises <see cref="Pressed"/>.</summary>
     public void Press() => Pressed?.Invoke(this, EventArgs.Empty);
@@ -100,7 +100,7 @@ public sealed class FakeHotkeySource : IHotkeySource
     public void Release() => Released?.Invoke(this, EventArgs.Empty);
 
     /// <inheritdoc />
-    public void Dispose() => Stop();
+    public void Dispose() => StopListening();
 }
 
 /// <summary>Returns canned transcripts and records what it was asked to transcribe.</summary>
