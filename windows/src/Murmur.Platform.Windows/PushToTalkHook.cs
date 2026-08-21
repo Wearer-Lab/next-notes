@@ -126,7 +126,7 @@ public sealed class PushToTalkHook : IHotkeySource
     [DllImport("user32.dll")]
     private static extern IntPtr CallNextHookEx(IntPtr hook, int code, IntPtr wParam, IntPtr lParam);
 
-    [DllImport("kernel32.dll", EntryPoint = "GetModuleHandleW", SetLastError = true)]
+    [DllImport("kernel32.dll", EntryPoint = "GetModuleHandleW", CharSet = CharSet.Unicode, SetLastError = true)]
     private static extern IntPtr GetModuleHandle(string? name);
 
     [DllImport("user32.dll", EntryPoint = "GetMessageW")]
@@ -264,7 +264,10 @@ public sealed class PushToTalkHook : IHotkeySource
         // Ignore anything this app injected itself.
         if (e.ExtraInfo == InjectedTag) return;
 
-        var message = (int)wParam;
+        // ToInt32 rather than a cast: since .NET 7 an explicit (int)IntPtr conversion
+        // silently truncates instead of throwing, which CA2020 flags. Window messages are
+        // always small, so the checked conversion is free and states the intent.
+        var message = wParam.ToInt32();
         var isDown = message is WM_KEYDOWN or WM_SYSKEYDOWN;
         var isUp = message is WM_KEYUP or WM_SYSKEYUP;
         if (!isDown && !isUp) return;

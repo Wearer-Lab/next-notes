@@ -34,7 +34,7 @@ public sealed class WasapiAudioCapture : IAudioCapture
 
     private Channel<float[]>? _channel;
     private BufferedWaveProvider? _rawSink;
-    private ISampleProvider? _pipeline;
+    private WdlResamplingSampleProvider? _pipeline;
     private bool _nativeTargetFormat;
     private float[] _pullBuffer = [];
 
