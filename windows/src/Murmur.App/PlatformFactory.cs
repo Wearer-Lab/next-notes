@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Runtime.Loader;
 using Murmur.Abstractions;
 
 namespace Murmur.App;
@@ -29,6 +30,38 @@ internal static class PlatformFactory
 
     /// <summary>Whether the Windows platform assembly could be loaded.</summary>
     public static bool IsAvailable => Load() is not null;
+
+    /// <summary>
+    /// Teaches the default load context to find the platform assembly beside the executable.
+    /// </summary>
+    /// <remarks>
+    /// <c>PublishSingleFile</c> only bundles assemblies the compiler knows about, and this
+    /// one is deliberately invisible to it — that is what keeps <c>Murmur.App</c> on plain
+    /// <c>net10.0</c>. It therefore ships as a loose file next to the exe. Default probing
+    /// normally finds it, but a single-file host resolves differently enough that relying on
+    /// that alone is a bet — and losing it means the app starts fine and then does nothing
+    /// when the user presses the key. Explicit is cheaper than that failure.
+    /// </remarks>
+    [UnconditionalSuppressMessage(
+        "Trimming",
+        "IL2026:RequiresUnreferencedCode",
+        Justification = "Murmur.Platform.Windows ships whole beside the executable and is "
+                      + "never trimmed; nothing it depends on can have been removed.")]
+    public static void InstallResolver()
+    {
+        if (_resolverInstalled) return;
+        _resolverInstalled = true;
+
+        AssemblyLoadContext.Default.Resolving += (context, name) =>
+        {
+            if (!string.Equals(name.Name, AssemblyName, StringComparison.Ordinal)) return null;
+
+            var candidate = System.IO.Path.Combine(AppContext.BaseDirectory, AssemblyName + ".dll");
+            return File.Exists(candidate) ? context.LoadFromAssemblyPath(candidate) : null;
+        };
+    }
+
+    private static bool _resolverInstalled;
 
     /// <summary>Creates the WASAPI capture, or null off Windows.</summary>
     public static IAudioCapture? CreateAudioCapture() =>

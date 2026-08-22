@@ -83,8 +83,10 @@ jobs:
           if (-not (Test-Path $exe)) { throw "Published exe not found at $exe" }
           $size = [math]::Round((Get-Item $exe).Length / 1MB, 1)
           Write-Host "published: $size MB"
-          & $exe --selftest
-          if ($LASTEXITCODE -ne 0) { throw "self-test failed with exit code $LASTEXITCODE" }
+          # Start-Process -Wait, not '&': this is a WinExe, so the console does not block on
+          # it and $LASTEXITCODE would be whatever ran before — the gate would never fail.
+          $run = Start-Process -FilePath $exe -ArgumentList '--selftest' -Wait -PassThru -NoNewWindow
+          if ($run.ExitCode -ne 0) { throw "self-test failed with exit code $($run.ExitCode)" }
 
       - name: Upload the exe
         uses: actions/upload-artifact@v4

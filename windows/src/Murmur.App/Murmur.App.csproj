@@ -45,6 +45,26 @@
 
   <!-- ReferenceOutputAssembly=false suppresses the copy too, so bring the assembly across
        explicitly. PlatformFactory resolves it by name at startup. -->
+  <Target Name="PublishWindowsPlatformLayer"
+          BeforeTargets="ComputeResolvedFilesToPublishList"
+          Condition="'$([System.OperatingSystem]::IsWindows())' == 'true'">
+    <MSBuild Projects="..\Murmur.Platform.Windows\Murmur.Platform.Windows.csproj"
+             Targets="Build"
+             Properties="Configuration=$(Configuration)" />
+    <ItemGroup>
+      <_PlatformPublish Include="..\Murmur.Platform.Windows\bin\$(Configuration)\net10.0-windows\Murmur.Platform.Windows.dll" />
+      <_PlatformPublish Include="..\Murmur.Platform.Windows\bin\$(Configuration)\net10.0-windows\NAudio*.dll" />
+      <!-- Loose beside the exe rather than inside the bundle: PublishSingleFile only bundles
+           assemblies the compiler knows about, and this one is deliberately invisible to it.
+           The default load context probes AppContext.BaseDirectory, and Program.cs installs
+           a resolver as a belt-and-braces fallback. -->
+      <ResolvedFileToPublish Include="@(_PlatformPublish)">
+        <RelativePath>%(Filename)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
   <Target Name="CopyWindowsPlatformLayer"
           AfterTargets="Build"
           Condition="'$([System.OperatingSystem]::IsWindows())' == 'true'">

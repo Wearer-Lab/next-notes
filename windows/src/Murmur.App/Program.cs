@@ -11,6 +11,8 @@ public static class Program
     [STAThread]
     public static int Main(string[] args)
     {
+        PlatformFactory.InstallResolver();
+
         // The published single-file exe is the only artifact CI can run end to end, and a
         // GitHub runner cannot show a window. This branch exercises startup — assembly
         // loading, native library resolution out of the self-extracted bundle, model
