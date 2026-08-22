@@ -99,6 +99,19 @@ public sealed class DictationEngine : IAsyncDisposable
     /// <returns>False if the hook could not be installed.</returns>
     public bool Start() => _hotkey.Start();
 
+    /// <summary>
+    /// Starts or stops recording from a button rather than the hotkey.
+    /// </summary>
+    /// <remarks>
+    /// Routed through the same state machine as the hotkey, deliberately. Two independent
+    /// paths into recording would eventually disagree about whether it is running.
+    /// </remarks>
+    public void TogglePushToTalk()
+    {
+        if (State == DictationState.Idle) _ = BeginAsync();
+        else if (State == DictationState.Recording) _ = EndAsync();
+    }
+
     private void OnPressed(object? sender, EventArgs e) => _ = BeginAsync();
 
     private void OnReleased(object? sender, EventArgs e) => _ = EndAsync();

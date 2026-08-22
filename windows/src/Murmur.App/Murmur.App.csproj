@@ -22,4 +22,17 @@
     <ProjectReference Include="..\Murmur.Core\Murmur.Core.csproj" />
     <ProjectReference Include="..\Murmur.Speech\Murmur.Speech.csproj" />
   </ItemGroup>
+
+  <!-- The Windows platform layer targets net10.0-windows and is resolved by reflection at
+       run time (see PlatformFactory). ReferenceOutputAssembly=false means it is BUILT and
+       COPIED next to the app without being compiled against — which is what lets this
+       project stay on plain net10.0 and therefore build and headless-test on macOS.
+       Skipped entirely off Windows, where it cannot compile. -->
+  <ItemGroup Condition="'$([System.OperatingSystem]::IsWindows())' == 'true'">
+    <ProjectReference Include="..\Murmur.Platform.Windows\Murmur.Platform.Windows.csproj"
+                      ReferenceOutputAssembly="false"
+                      OutputItemType="Content"
+                      CopyToOutputDirectory="PreserveNewest"
+                      Private="true" />
+  </ItemGroup>
 </Project>
