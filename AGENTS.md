@@ -14,7 +14,7 @@ whatever had focus. Two independent implementations:
 | | macOS | Windows |
 |---|---|---|
 | Language | Swift 6 | C# / .NET 10 |
-| UI | SwiftUI | Avalonia *(not written yet)* |
+| UI | SwiftUI | Avalonia |
 | Speech | Apple `SpeechAnalyzer`, or Parakeet via FluidAudio | Parakeet via sherpa-onnx |
 | Location | repo root | `windows/` |
 
@@ -38,8 +38,8 @@ a failing vector without changing the other is how the two silently diverge — 
 of them can be exercised by hand.
 
 ```bash
-swift test --filter VectorTests           # macOS side
-cd windows && dotnet test Murmur.sln      # Windows side
+swift test --filter VectorTests                    # macOS side
+cd windows && dotnet test Murmur.CrossPlatform.slnf # Windows side, runs anywhere
 ```
 
 The Swift copy at `Tests/MurmurDictionaryTests/dictionary-test-vectors.json` is a copy, and
@@ -127,9 +127,8 @@ corrupt the signature. `make install` puts the running copy in `/Applications`.
 
 ## Windows specifics
 
-Everything here was researched and verified but **never run on Windows.** Treat the specifics
-as load-bearing; they were expensive to establish. Full detail in `windows/README.md` and
-`docs/PARAKEET-WINDOWS.md`.
+The specifics below were expensive to establish and several were found the hard way. Treat
+them as load-bearing. Full detail in `windows/README.md` and `docs/PARAKEET-WINDOWS.md`.
 
 **Three pinned versions that break silently at "latest":**
 
@@ -185,11 +184,23 @@ lookahead, `\p{L}`, and `$1`–`$9` in replacements. Nothing else.
 
 ## What isn't built
 
-1. **The whole Windows platform layer** — audio, hotkey, injection, UI.
-2. **Command Mode** — select text, hold a second key, "make this more formal."
-3. **Onboarding** — a first-run window walking through both macOS permissions.
-4. **Notarization** — signing works; notarization would end the Gatekeeper warning.
+1. **Command Mode** — select text, hold a second key, "make this more formal."
+2. **Onboarding** — a first-run window walking through the macOS permissions.
+3. **Notarization** (macOS) and **code signing** (Windows). Both apps are unsigned for
+   distribution, so Windows users will meet SmartScreen.
+4. **An installer** for Windows, and model download from inside the app rather than by
+   following `docs/PARAKEET-WINDOWS.md` by hand.
 
-And one thing CI structurally cannot verify on either platform: **text injection into a
-foreground application.** GitHub runners have an interactive desktop but cannot take the
-foreground. That needs a real machine and a human.
+## What no amount of CI can verify
+
+On Windows, nobody has yet held the key and spoken. Specifically unverified:
+
+- Text injection landing in a foreground app — runners have an interactive desktop but
+  cannot take the foreground.
+- A real microphone: format negotiation, the OS privacy block, unplugging mid-capture.
+- The keyboard hook firing on a physical keypress.
+- Parakeet transcribing real speech, and whether ~2 GB resident is tolerable.
+
+Everything those feed into is behind an interface and tested with fakes. The bindings
+themselves are not. **First real-hardware run should start with `--selftest`, then a single
+short dictation into Notepad.**
