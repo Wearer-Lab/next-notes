@@ -18,9 +18,13 @@ whatever had focus. Two independent implementations:
 | Speech | Apple `SpeechAnalyzer`, or Parakeet via FluidAudio | Parakeet via sherpa-onnx |
 | Location | repo root | `windows/` |
 
-**The macOS app works and is in daily use. The Windows app is a dictionary engine plus a
-detailed specification — no audio, hotkey, injection or UI yet.** Do not describe it as
-working.
+**The macOS app works and is in daily use.**
+
+**The Windows app is complete but has never run on real hardware.** Every layer exists;
+CI builds it, runs 63 tests, publishes a single-file executable, launches it on Windows and
+confirms the platform layer loads and constructs. What has never happened is a person
+holding the key and speaking into a microphone. Describe it that way — not as "working",
+not as "unfinished".
 
 ---
 
@@ -48,6 +52,11 @@ cp shared/dictionary-test-vectors.json Tests/MurmurDictionaryTests/
 ---
 
 ## Things that look like bugs and are not
+
+**`dotnet build Murmur.sln` fails on macOS** with `NETSDK1073`. Expected —
+`Murmur.Platform.Windows` targets `net10.0-windows`. Use `Murmur.CrossPlatform.slnf`, which
+omits it; everything else, including the whole UI suite, builds and tests on macOS in about
+half a second.
 
 **`swift build` fails with "input file was modified during the build."** The repo lives in an
 iCloud-synced folder and the sync engine touches files mid-compile. **Always build with
@@ -138,6 +147,14 @@ key-down is swallowed and the key-up escapes, the target app believes Ctrl is he
 **UI Automation cannot inject text.** `TextPattern` is documented read-only and
 `ValuePattern` replaces a whole field rather than inserting at the caret. `SendInput` is the
 primary path, not a fallback.
+
+**`Murmur.App` loads the platform layer by reflection, not by reference.** A direct
+reference would force the UI onto `net10.0-windows` and you would lose the ability to run it
+on your own machine. Two consequences that have already bitten once: the assembly is
+invisible to `PublishSingleFile`, so it is published as a loose file beside the exe *and*
+resolved by an explicit `AssemblyLoadContext` handler; and the published self-test checks
+this, because when it breaks the app starts perfectly and then does nothing at all when the
+key is pressed.
 
 **Keep `Murmur.Platform.Windows` logic-free.** Anything living there is code CI cannot
 exercise. Retries, debouncing and device-change handling belong in the platform-neutral
