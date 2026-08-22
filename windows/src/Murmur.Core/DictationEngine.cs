@@ -124,6 +124,12 @@ public sealed class DictationEngine : IAsyncDisposable
         {
             await foreach (var chunk in _capture.CaptureAsync(_recording!.Token).ConfigureAwait(false))
             {
+                // Stop consuming the moment recording ends. Cancellation is cooperative, so
+                // chunks already queued still arrive after EndAsync has moved on — and
+                // without this guard one of them sets Level back to a reading that has
+                // already been zeroed.
+                if (State != DictationState.Recording) break;
+
                 // Copied, not referenced: capture implementations are entitled to reuse
                 // their buffer the moment this returns.
                 _buffer?.AddRange(chunk.Samples.Span);
@@ -134,6 +140,13 @@ public sealed class DictationEngine : IAsyncDisposable
         catch (OperationCanceledException)
         {
             // Normal: the key was released.
+        }
+        finally
+        {
+            // Authoritative: this runs only once the capture loop has genuinely finished, so
+            // nothing can raise the level afterwards and leave the meter stuck.
+            Level = 0;
+            Changed?.Invoke(this, EventArgs.Empty);
         }
     }
 
