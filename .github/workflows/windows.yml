@@ -100,7 +100,9 @@ jobs:
         with:
           name: test-results
           path: windows/artifacts/test-results
-          if-no-files-found: error
+          # 'warn', not 'error': when the build fails before tests run there are no results,
+          # and a second red step there only obscures the real failure.
+          if-no-files-found: warn
 
       # A binlog is the single most useful artifact when a failure can't be reproduced
       # locally — which, for this project, is every Windows failure.

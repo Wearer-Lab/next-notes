@@ -29,10 +29,29 @@
        project stay on plain net10.0 and therefore build and headless-test on macOS.
        Skipped entirely off Windows, where it cannot compile. -->
   <ItemGroup Condition="'$([System.OperatingSystem]::IsWindows())' == 'true'">
+    <!-- SkipGetTargetFrameworkProperties is required: without it MSBuild refuses the
+         reference outright ("targets net10.0-windows, cannot be referenced by a project
+         that targets .NETCoreApp") before ReferenceOutputAssembly is ever considered. -->
     <ProjectReference Include="..\Murmur.Platform.Windows\Murmur.Platform.Windows.csproj"
                       ReferenceOutputAssembly="false"
-                      OutputItemType="Content"
-                      CopyToOutputDirectory="PreserveNewest"
-                      Private="true" />
+                      SkipGetTargetFrameworkProperties="true"
+                      UndefineProperties="TargetFramework"
+                      Private="false" />
   </ItemGroup>
+
+  <!-- ReferenceOutputAssembly=false suppresses the copy too, so bring the assembly across
+       explicitly. PlatformFactory resolves it by name at startup. -->
+  <Target Name="CopyWindowsPlatformLayer"
+          AfterTargets="Build"
+          Condition="'$([System.OperatingSystem]::IsWindows())' == 'true'">
+    <ItemGroup>
+      <PlatformLayer Include="..\Murmur.Platform.Windows\bin\$(Configuration)\net10.0-windows\Murmur.Platform.Windows.dll" />
+      <PlatformLayer Include="..\Murmur.Platform.Windows\bin\$(Configuration)\net10.0-windows\NAudio*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PlatformLayer)"
+          DestinationFolder="$(OutDir)"
+          SkipUnchangedFiles="true"
+          ContinueOnError="true" />
+  </Target>
+
 </Project>
