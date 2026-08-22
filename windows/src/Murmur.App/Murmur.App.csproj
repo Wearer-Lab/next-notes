@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- Plain net10.0, NOT net10.0-windows. Avalonia is cross-platform, and this is what
+         lets the UI be built and headless-tested on macOS — the reason Avalonia was chosen
+         over WPF. Windows-only code lives in Murmur.Platform.Windows. -->
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Murmur.App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Murmur.Core\Murmur.Core.csproj" />
+    <ProjectReference Include="..\Murmur.Speech\Murmur.Speech.csproj" />
+  </ItemGroup>
+</Project>

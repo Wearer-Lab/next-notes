@@ -1,0 +1,10 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Murmur.App.App"
+             RequestedThemeVariant="Default">
+  <!-- Default, not a fixed variant: the app follows the system, which is what picks
+       between the silver face and the black face. -->
+  <Application.Styles>
+    <FluentTheme />
+  </Application.Styles>
+</Application>
