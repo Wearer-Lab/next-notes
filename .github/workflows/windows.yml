@@ -68,6 +68,32 @@ jobs:
           --logger "console;verbosity=normal"
           --results-directory artifacts/test-results
 
+      # The published exe is the only artifact CI can actually run, and a runner cannot
+      # show a window — so --selftest exercises startup, native library resolution out of
+      # the self-extracted bundle, and model discovery, then exits. That is the class of
+      # failure that appears only after publishing.
+      - name: Publish and smoke-test the real exe
+        shell: pwsh
+        run: |
+          dotnet publish src/Murmur.App/Murmur.App.csproj `
+            --configuration Release --runtime win-x64 --self-contained true `
+            -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true `
+            --output artifacts/publish
+          $exe = 'artifacts/publish/Murmur.App.exe'
+          if (-not (Test-Path $exe)) { throw "Published exe not found at $exe" }
+          $size = [math]::Round((Get-Item $exe).Length / 1MB, 1)
+          Write-Host "published: $size MB"
+          & $exe --selftest
+          if ($LASTEXITCODE -ne 0) { throw "self-test failed with exit code $LASTEXITCODE" }
+
+      - name: Upload the exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: Murmur-win-x64
+          path: windows/artifacts/publish/Murmur.App.exe
+          if-no-files-found: error
+          compression-level: 0
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
