@@ -2,9 +2,10 @@
 
 The Windows port of Murmur — push-to-talk dictation, on-device.
 
-> **Status: in progress.** The dictionary engine is complete and passes the shared
-> behavioural contract. The audio, hotkey, injection and UI layers are specified in detail
-> but not yet written. **None of this has ever run on Windows** — see [Honesty](#honesty).
+> **Status: feature-complete, never run on real hardware.** Every layer exists and CI
+> builds, tests and publishes a working single-file executable that starts and passes its
+> own self-test on Windows. What has *not* happened is a human holding the key and speaking
+> into a real microphone — see [Honesty](#honesty).
 
 ---
 
@@ -72,24 +73,32 @@ install a toolkit. On CPU with int8 weights, transcription runs ~40× faster tha
 
 ```
 windows/
-├─ Directory.Build.props        strict analysis, applied to every project
-├─ Directory.Packages.props     central version pinning
-├─ global.json                  SDK pin
+├─ Directory.Build.props          strict analysis, applied to every project
+├─ Directory.Packages.props       central version pinning
+├─ global.json                    SDK pin
 ├─ src/
-│  └─ Murmur.Dictionary/        net10.0 — platform-neutral, so CA1416 makes any
-│                               Windows-only API call a build error
+│  ├─ Murmur.Dictionary/          corrections + biasing          net10.0
+│  ├─ Murmur.Abstractions/        the four platform interfaces   net10.0
+│  ├─ Murmur.Core/                engine, segmenter, storage     net10.0
+│  ├─ Murmur.Speech/              Parakeet via sherpa-onnx       net10.0
+│  ├─ Murmur.Testing/             fakes for the interfaces       net10.0
+│  ├─ Murmur.App/                 Avalonia UI                    net10.0
+│  └─ Murmur.Platform.Windows/    the ONLY Win32 code            net10.0-windows
 └─ tests/
-   └─ Murmur.Dictionary.Tests/  runs the shared vectors
+   ├─ Murmur.Dictionary.Tests/    the shared vectors             24 tests
+   ├─ Murmur.Core.Tests/          engine, chunking, storage      26 tests
+   └─ Murmur.App.Tests/           headless Avalonia UI           13 tests
 ```
 
-Planned, following the same rule — platform-neutral unless it truly cannot be:
+**Only one project targets `-windows`.** Everything else is platform-neutral, so `CA1416`
+turns an accidental Win32 call into a build error — and, more usefully, the whole app
+builds, runs and tests on macOS.
 
-```
-   Murmur.Abstractions/      IAudioCapture, IHotkeySource, ITextInjector  (net10.0)
-   Murmur.Speech/            sherpa-onnx behind ITranscriber              (net10.0)
-   Murmur.Platform.Windows/  the ONLY Win32 code in the repo              (net10.0-windows)
-   Murmur.App/               Avalonia UI                                  (net10.0-windows)
-```
+`Murmur.App` loads the platform layer **by reflection** rather than referencing it. A direct
+reference would drag the UI onto `net10.0-windows` and destroy the local loop. The published
+self-test verifies that reflection works from inside the single-file bundle, because that is
+where the arrangement would otherwise fail — silently, at the moment the user first pressed
+the key.
 
 Keeping the platform layer logic-free is deliberate: anything that lives there is code CI
 cannot exercise. Retries, debouncing, device-change handling all belong in the neutral
@@ -113,12 +122,15 @@ incremental build, so `-warnaserror` would pass on cached results and prove noth
 
 ## <a id="honesty"></a>Honesty about what is verified
 
-**Verified:** the dictionary logic passes all 19 shared vectors in Swift on this machine.
-The C# implementation is a line-by-line counterpart with the same regex construction,
-including `RegexOptions.CultureInvariant` and NFC normalization.
+**Verified, on Windows, every push:** 63 tests pass — 24 dictionary (the shared vectors),
+26 core (dictation state machine, audio chunking, all three storage formats), 13 headless
+Avalonia UI. CI then publishes a self-contained ~116 MB executable, **runs it**, and the
+binary reports back that the dictionary works, the source-generated JSON round-trips, and
+the Windows platform layer loads and constructs out of the bundle.
 
-**Not verified:** that the C# code compiles. That is what the CI workflow is for, and its
-first green run is the first real evidence.
+**Verified on macOS, in ~0.5s:** the same 63 tests. The UI genuinely runs headless here,
+which is why bugs like a `Render` method mutating a property get caught while writing them
+rather than three CI round-trips later.
 
 **Known divergences between the two regex engines**, measured across 30 cases — 9 differed.
 The two that affect this code are both handled: culture-sensitive case-insensitive matching
@@ -126,6 +138,14 @@ The two that affect this code are both handled: culture-sensitive case-insensiti
 that are *not* fixable are simply avoided: ICU folds `ß` to `ss` and .NET does not, and
 .NET's `.` splits surrogate pairs. Neither is reachable from the patterns this code builds.
 
-**Cannot be verified in CI at all:** text injection into a foreground application. GitHub
-runners have an interactive desktop, but foreground activation fails there. That needs a
-real Windows machine.
+**Cannot be verified anywhere but a real machine:**
+
+- Text injection into a foreground app. Runners have an interactive desktop but cannot take
+  the foreground.
+- A real microphone: device format negotiation, the OS microphone-privacy block, unplugging
+  mid-capture.
+- The low-level keyboard hook actually firing on a physical keypress.
+- Parakeet transcribing real speech, and whether the ~2 GB working set is tolerable.
+
+Everything those depend on is behind an interface and exercised with fakes, so the logic
+around them is tested. The bindings themselves are not.
