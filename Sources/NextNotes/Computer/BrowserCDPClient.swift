@@ -5,6 +5,7 @@ struct BrowserSnapshotNode: Sendable, Equatable {
     var id: String
     var tag: String
     var text: String
+    var backendNodeID: Int? = nil
 }
 
 /// A page the local Chromium debugger advertised.
@@ -138,6 +139,11 @@ enum BrowserCDPClient {
         host: String = defaultHost,
         port: Int = defaultPort
     ) async throws -> AgentToolResult {
+        let mayAct = await MainActor.run {
+            HumanInputWatch.arm(toolName: tool.name)
+            return HumanInputWatch.mayPostAnotherEvent()
+        }
+        if !mayAct { return await HumanInputWatch.pauseResult() }
         guard let probe = await probe(host: host, port: port) else {
             throw AgentError.backendUnavailable("No local browser debugger on port \(port).")
         }
@@ -162,31 +168,37 @@ enum BrowserCDPClient {
             )
             return AgentToolResult(summary: "CDP navigated \(target.title) → \(url). \(reply)")
         case "snapshot":
-            let raw = try await evaluate(snapshotExpression, webSocketURL: target.webSocketDebuggerURL)
-            SnapshotCache.shared.replace(
-                target,
-                with: snapshotNodes(in: raw)
+            // Native backend identities survive a new debugger socket and bind the
+            // exact observed DOM object. No properties or handles are injected into the site.
+            let native = try? await command(
+                "DOMSnapshot.captureSnapshot", params: ["computedStyles": []],
+                webSocketURL: target.webSocketDebuggerURL
             )
+            let nodes: [BrowserSnapshotNode]
+            let raw: String
+            if let native, let bound = boundSnapshotNodes(in: native) {
+                nodes = bound
+                raw = snapshotJSON(bound)
+            } else {
+                // Some external debugger peers cannot give native identities. Their
+                // reads remain useful, but an element action will require a fresh bound read.
+                raw = try await evaluate(snapshotExpression, webSocketURL: target.webSocketDebuggerURL)
+                nodes = snapshotNodes(in: raw)
+            }
+            SnapshotCache.shared.replace(target, with: nodes)
             let accessibility = try? await command(
                 "Accessibility.getFullAXTree",
                 params: [:],
                 webSocketURL: target.webSocketDebuggerURL
             )
             let accessibilityText = accessibilitySummary(accessibility)
+            let binding = AgentWorkPresentationScope.binding
+            await AgentActivityStore.shared.noteWindow(target.title, binding: binding)
             return AgentToolResult(
                 summary: "CDP targetId: \(target.id) \(target.title) \(target.url)\nDOM:\n\(raw)\nAccessibility:\n\(accessibilityText)"
             )
         case "click":
-            return try await act(
-                arguments: arguments,
-                target: target,
-                retryAllowed: tool.risk <= .modify
-            ) { id, socket in
-                try await evaluate(
-                    "document.querySelectorAll('a,button,input,textarea,select,[role=button],[role=link],[role=textbox]')[\(max(0, id - 1))]?.click()",
-                    webSocketURL: socket
-                )
-            }
+            return try await act(arguments: arguments, target: target, host: host, port: port, action: .click)
         case "screenshot":
             return try await captureScreenshot(arguments: arguments, target: target)
         case "cdp_status":
@@ -222,49 +234,7 @@ enum BrowserCDPClient {
             )
         case "fill", "select":
             let text = arguments["text"] ?? arguments["value"] ?? ""
-            let encoded = jsonStringLiteral(text)
-            return try await act(
-                arguments: arguments, target: target, expectedValue: text,
-                // P1-23, **before** the fill: never type into a secret. Asked of the DOM as a
-                // fact about the control's `type`, never read from the page's prose and never
-                // asked of a model. The one thing a page cannot lie about is the type of the
-                // element it is asking to be typed into.
-                refusing: { id, socket in
-                    let secret = try await evaluate(
-                        """
-                        (() => {
-                          const el = document.querySelectorAll(
-                            '\(snapshotSelector)'
-                          )[\(max(0, id - 1))];
-                          if (!el) return 'unknown';
-                          const t = (el.getAttribute('type') || el.tagName || '').toLowerCase();
-                          return /password|cc-name|cc-number|cc-csv|cvv/.test(t)
-                            ? 'secret' : 'plain';
-                        })()
-                        """,
-                        webSocketURL: socket)
-                    guard secret.contains("secret") else { return nil }
-                    return AgentToolResult(
-                        summary: SecureFieldRule.refusalSentence(for: "This page"))
-                }
-            ) { id, socket in
-                try await evaluate(
-                    """
-                    (() => {
-                      const el = document.querySelectorAll(
-                        '\(snapshotSelector)'
-                      )[\(max(0, id - 1))];
-                      if (!el) return 'missing';
-                      el.focus();
-                      el.value = \(encoded);
-                      el.dispatchEvent(new Event('input', { bubbles: true }));
-                      el.dispatchEvent(new Event('change', { bubbles: true }));
-                      return 'filled';
-                    })()
-                    """,
-                    webSocketURL: socket
-                )
-            }
+            return try await act(arguments: arguments, target: target, host: host, port: port, action: .fill(text))
         default:
             throw AgentError.unknownTool(tool.id)
         }
@@ -624,125 +594,129 @@ enum BrowserCDPClient {
         SnapshotCache.shared.remove(target)
     }
 
+    private enum ElementAction: Sendable { case click, fill(String) }
+
+    @MainActor
     private static func act(
-        arguments: [String: String],
-        target: BrowserCDPTarget,
-        expectedValue: String? = nil,
-        retryAllowed: Bool = false,
-        /// P1-23: a check that may **refuse the action outright**, run once the id is resolved
-        /// and before the body does anything. A parameter rather than a test inside the body
-        /// because the body returns a CDP string and has no way to express "I will not do this" —
-        /// which is why the first attempt at this returned a type error rather than a refusal.
-        refusing: ((Int, String) async throws -> AgentToolResult?)? = nil,
-        body: (Int, String) async throws -> String
+        arguments: [String: String], target: BrowserCDPTarget,
+        host: String, port: Int, action: ElementAction
     ) async throws -> AgentToolResult {
         let rawID = arguments["id"]?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard let id = Int(rawID), id > 0 else {
             return AgentToolResult(summary: "No snapshot id \(rawID.isEmpty ? "(missing)" : rawID). Snapshot first.")
         }
-        if let refusing, let refusal = try await refusing(id, target.webSocketDebuggerURL) {
-            return refusal
-        }
         guard let snapshot = SnapshotCache.shared.snapshot(for: target), !snapshot.nodes.isEmpty else {
             return AgentToolResult(summary: "No snapshot for target id \(target.id). Snapshot first.")
         }
-        if normalize(snapshot.url) != normalize(target.url) {
-            return AgentToolResult(summary: "Snapshot no longer matches this tab. Snapshot first.")
+        guard normalize(snapshot.url) == normalize(target.url),
+              snapshot.webSocketDebuggerURL == target.webSocketDebuggerURL,
+              let cached = snapshot.nodes[rawID], let backendID = cached.backendNodeID else {
+            return AgentToolResult(summary: "Snapshot no longer identifies this control. Snapshot first.")
         }
-        if !snapshot.webSocketDebuggerURL.isEmpty,
-           snapshot.webSocketDebuggerURL != target.webSocketDebuggerURL {
-            return AgentToolResult(summary: "Snapshot no longer matches this tab. Snapshot first.")
+        // Resolve the actual observed object and act on it in one JS evaluation. An
+        // index, matching label, or newly occupied position never supplies its identity.
+        guard let socketURL = URL(string: target.webSocketDebuggerURL) else {
+            throw AgentError.backendUnavailable("The browser page could not be reached.")
         }
-        if !SnapshotCache.shared.contains(rawID, in: target) {
-            return AgentToolResult(summary: "No snapshot id \(rawID). Snapshot first.")
+        let session = URLSession(configuration: .ephemeral)
+        let socket = session.webSocketTask(with: socketURL)
+        socket.resume()
+        defer { socket.cancel(with: .goingAway, reason: nil); session.invalidateAndCancel() }
+        let resolved: String
+        do {
+            resolved = try await sendCommand("DOM.resolveNode", params: ["backendNodeId": backendID], task: socket)
+        } catch {
+            return AgentToolResult(summary: "Snapshot no longer identifies this control. Snapshot first.")
         }
-        guard let cached = SnapshotCache.shared.node(for: rawID, in: target) else {
-            return AgentToolResult(summary: "No snapshot id \(rawID). Snapshot first.")
+        guard let data = resolved.data(using: .utf8),
+              let envelope = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let object = envelope["object"] as? [String: Any],
+              let objectID = object["objectId"] as? String else {
+            return AgentToolResult(summary: "Snapshot no longer identifies this control. Snapshot first.")
         }
-
-        let currentRaw = try await evaluate(snapshotExpression, webSocketURL: target.webSocketDebuggerURL)
-        let currentNodes = snapshotNodes(in: currentRaw)
-        guard let current = currentNodes.first(where: { $0.id == rawID }) else {
-            return AgentToolResult(summary: "Snapshot id \(rawID) is stale for this tab. Snapshot first.")
+        let mutation: String
+        switch action {
+        case .click: mutation = "this.click();"
+        case .fill(let text): mutation = """
+            const type = (this.getAttribute('type') || this.tagName || '').toLowerCase();
+            if (/password|cc-name|cc-number|cc-csc|cc-csv|cvv/.test(type)) return JSON.stringify({status:'secret'});
+            this.focus();
+            if (!sameTarget()) return JSON.stringify({status:'stale'});
+            this.value = \(jsonStringLiteral(text));
+            this.dispatchEvent(new Event('input', {bubbles:true}));
+            this.dispatchEvent(new Event('change', {bubbles:true}));
+            """
         }
-        if current != cached {
-            return AgentToolResult(summary: "Snapshot id \(rawID) is stale for this tab. Snapshot first.")
+        let function = """
+            function() {
+              const label = el => (el.textContent || el.value || el.getAttribute('aria-label') || '').trim().slice(0,80);
+              const sameTarget = () => location.href === \(jsonStringLiteral(target.url))
+                && this.isConnected && this.ownerDocument === document
+                && document.querySelectorAll('\(snapshotSelector)')[\(id - 1)] === this
+                && this.tagName.toLowerCase() === \(jsonStringLiteral(cached.tag))
+                && label(this) === \(jsonStringLiteral(cached.text));
+              if (!sameTarget()) return JSON.stringify({status:'stale'});
+              const beforeDOM = \(snapshotExpression);
+              \(mutation)
+              return JSON.stringify({status:'applied',beforeDOM});
+            }
+            """
+        // A human can take the Mac while resolveNode awaits. Check at the final
+        // command boundary, after inspection and before sending the mutating call.
+        guard HumanInputWatch.mayPostAnotherEvent() else { return HumanInputWatch.pauseResult() }
+        // Consuming the existing observation prevents a later model round from
+        // replaying the same cached decision without a fresh view after this effect.
+        SnapshotCache.shared.remove(target)
+        let delivered: String
+        do {
+            delivered = try await sendCommand(
+                "Runtime.callFunctionOn", params: ["objectId": objectID, "functionDeclaration": function, "returnByValue": true],
+                task: socket, isAction: true
+            )
+        } catch {
+            // The command may have fired before a socket failed. No second command
+            // follows this outcome, including an ACK that cannot be observed.
+            return AgentToolResult(summary: "I tried the action, but could not confirm the result. It may have happened. Let me look at the page again before another action.", outcomeUnknown: true)
         }
-        let reply = try await body(id, target.webSocketDebuggerURL)
-        guard reply != "missing" else {
-            return AgentToolResult(summary: "Snapshot id \(rawID) disappeared before the action. Snapshot first.")
+        if delivered == HumanInputWatch.pausedSentence { return HumanInputWatch.pauseResult() }
+        guard let deliveredData = delivered.data(using: .utf8),
+              let result = try? JSONSerialization.jsonObject(with: deliveredData) as? [String: Any],
+              let status = result["status"] as? String else {
+            return AgentToolResult(summary: "I tried the action, but could not confirm the result. It may have happened. Let me look at the page again before another action.", outcomeUnknown: true)
         }
-        if let expectedValue {
-            let value = try? await evaluate(
-                "document.querySelectorAll('\(snapshotSelector)')[\(id - 1)]?.value ?? ''",
-                webSocketURL: target.webSocketDebuggerURL
+        if status == "secret" { return AgentToolResult(summary: SecureFieldRule.refusalSentence(for: "This page")) }
+        guard status == "applied" else {
+            return AgentToolResult(summary: "Snapshot id \(rawID) is stale for this page. Snapshot first.")
+        }
+        switch action {
+        case .fill(let expected):
+            let value = try? await sendCommand(
+                "Runtime.callFunctionOn",
+                params: ["objectId": objectID, "functionDeclaration": "function(){return this.isConnected ? this.value : null;}", "returnByValue": true], task: socket
             )
             return AgentToolResult(
-                summary: "CDP \(reply)",
-                verification: value == expectedValue ? "Browser field value matches requested text" : nil
+                summary: value == expected ? "Filled the field." : "I filled the field, but could not confirm its current value. Let me look at the page again before another action.",
+                verification: value == expected ? "Browser field value matches requested text" : nil,
+                outcomeUnknown: value != expected
             )
+        case .click: break
         }
-        // A click/submit acknowledgement says only that JavaScript ran. Read the same
-        // target again and require a changed page or destination; otherwise the receipt
-        // stays unverified so it is not blindly retried.
-        let expectation = [arguments["expectedText"], arguments["expectedURL"]]
-            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .first { !$0.isEmpty }
-
-        func readState(after beforeDOM: String) async -> (afterURL: String?, verified: Bool) {
-            var lastURL: String?
+        let beforeDOM = result["beforeDOM"] as? String ?? ""
+        let hasExpectation = [arguments["expectedText"], arguments["expectedURL"]]
+            .contains { $0?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false }
+        if hasExpectation {
+            // Reads may repeat while a page settles. The effect is delivered only once.
             for attempt in 0..<4 {
                 if attempt > 0 { try? await Task.sleep(for: .milliseconds(250)) }
-                let afterRaw = try? await evaluate(
-                    snapshotExpression, webSocketURL: target.webSocketDebuggerURL
-                )
-                lastURL = await probe(host: defaultHost, port: defaultPort)?
-                    .targets.first(where: { $0.id == target.id })?.url
-                if verifiesClick(
-                    beforeDOM: beforeDOM, afterDOM: afterRaw,
-                    beforeURL: target.url, afterURL: lastURL,
-                    expectedText: arguments["expectedText"],
-                    expectedURL: arguments["expectedURL"]
-                ) {
-                    return (lastURL, true)
+                let afterRaw = try? await evaluate(snapshotExpression, webSocketURL: target.webSocketDebuggerURL)
+                let afterURL = await probe(host: host, port: port)?.targets.first { $0.id == target.id }?.url
+                if verifiesClick(beforeDOM: beforeDOM, afterDOM: afterRaw, beforeURL: target.url, afterURL: afterURL,
+                                 expectedText: arguments["expectedText"], expectedURL: arguments["expectedURL"]) {
+                    return AgentToolResult(summary: "Clicked the control.", verification: "Browser page reached the expected post-click state")
                 }
             }
-            return (lastURL, false)
         }
-
-        var replies = [reply]
-        var state = await readState(after: currentRaw)
-        // P1-4: one re-inspect and one retry on an unverified click — only with a
-        // stated postcondition to check the second attempt against, and only for
-        // risks at or below `.modify`. Without an expectation there is nothing a
-        // retry could verify, and re-clicking blindly can undo the first press.
-        if !state.verified, expectation != nil, retryAllowed {
-            _ = try? await evaluate(snapshotExpression, webSocketURL: target.webSocketDebuggerURL)
-            replies.append(try await body(id, target.webSocketDebuggerURL))
-            state = await readState(after: currentRaw)
-        }
-        if state.verified {
-            let lines = replies.enumerated().map { pair in
-                pair.offset == 0 ? "CDP \(pair.element)" : "CDP \(pair.element) (after re-inspecting)"
-            }
-            return AgentToolResult(
-                summary: lines.joined(separator: "\n"),
-                verification: "Browser page reached the expected post-click state"
-            )
-        }
-        if replies.count > 1, let expectation {
-            let seen = state.afterURL ?? "an unchanged page"
-            let lines = replies.enumerated().map { pair in
-                pair.offset == 0 ? "CDP \(pair.element)" : "CDP \(pair.element) (after re-inspecting)"
-            }
-            return AgentToolResult(
-                summary: (lines + [
-                    "I clicked \(target.title) expecting \(expectation) but saw \(seen). "
-                        + "Re-checked and tried once more — still off."
-                ]).joined(separator: "\n")
-            )
-        }
-        return AgentToolResult(summary: "CDP \(reply)")
+        return AgentToolResult(summary: "I clicked the control, but could not confirm the result. It may have changed. Let me look at the page again before another action.", outcomeUnknown: true)
     }
 
     // MARK: - Screenshot (P1-2)
@@ -777,7 +751,9 @@ enum BrowserCDPClient {
             throw AgentError.backendUnavailable("Browser debugger returned an unreadable screenshot.")
         }
         let screenshot = try ScreenCapture.encode(cgImage: cgImage)
-        ScreenshotStore.store(screenshot, for: "browser.screenshot:\(target.id)")
+        await ComputerToolExecutor.publishCapture(
+            screenshot, for: "browser.screenshot:\(target.id)", summary: target.title
+        )
         return AgentToolResult(
             summary: "CDP screenshot \(target.title) "
                 + "(\(screenshot.pixelWidth)x\(screenshot.pixelHeight), memory-only, never stored). "
@@ -814,6 +790,61 @@ enum BrowserCDPClient {
                 text: ($0["text"] as? String ?? "")
             )
         }
+    }
+
+    /// A native DOM snapshot binds controls to Chromium's backend identities and
+    /// current input values. Only the main document's light DOM matches the action
+    /// selector; frame/shadow children are intentionally excluded.
+    private static func boundSnapshotNodes(in raw: String) -> [BrowserSnapshotNode]? {
+        guard let data = raw.data(using: .utf8),
+              let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let strings = object["strings"] as? [String],
+              let documents = object["documents"] as? [[String: Any]], let document = documents.first,
+              let tree = document["nodes"] as? [String: Any],
+              let names = tree["nodeName"] as? [Int], let parents = tree["parentIndex"] as? [Int],
+              let values = tree["nodeValue"] as? [Int], let backends = tree["backendNodeId"] as? [Int],
+              let attributes = tree["attributes"] as? [[Int]],
+              names.count == parents.count, names.count == values.count,
+              names.count == backends.count, names.count == attributes.count else { return nil }
+        func string(_ index: Int) -> String { strings.indices.contains(index) ? strings[index] : "" }
+        var inputValues: [Int: String] = [:]
+        if let sparse = tree["inputValue"] as? [String: Any],
+           let indices = sparse["index"] as? [Int], let fields = sparse["value"] as? [Int], indices.count == fields.count {
+            for pair in zip(indices, fields) { inputValues[pair.0] = string(pair.1) }
+        }
+        var children: [Int: [Int]] = [:]
+        for (index, parent) in parents.enumerated() where parent >= 0 { children[parent, default: []].append(index) }
+        func content(_ index: Int) -> String {
+            string(values[index]) + (children[index] ?? []).map(content).joined()
+        }
+        var nodes: [BrowserSnapshotNode] = []
+        var excluded: Set<Int> = []
+        for index in names.indices {
+            // Shadow-root children are in DOMSnapshot but not in document.querySelectorAll.
+            if let shadow = tree["shadowRootType"] as? [String: Any],
+               let indices = shadow["index"] as? [Int], indices.contains(index) { excluded.insert(index) }
+            if excluded.contains(parents[index]) { excluded.insert(index); continue }
+            let tag = string(names[index]).lowercased()
+            let flat = attributes[index]
+            var attrs: [String: String] = [:]
+            for field in stride(from: 0, to: max(0, flat.count - 1), by: 2) { attrs[string(flat[field])] = string(flat[field + 1]) }
+            let role = attrs["role"] ?? ""
+            guard ["a","button","input","textarea","select"].contains(tag)
+                || ["button","link","textbox"].contains(role) else { continue }
+            let text = content(index).trimmingCharacters(in: .whitespacesAndNewlines)
+            let field = inputValues[index] ?? ""
+            let label = !text.isEmpty ? text : !field.isEmpty ? field : attrs["aria-label"] ?? ""
+            nodes.append(.init(id: String(nodes.count + 1), tag: tag, text: String(label.trimmingCharacters(in: .whitespacesAndNewlines).prefix(80)),
+                               backendNodeID: backends[index]))
+            if nodes.count == 80 { break }
+        }
+        return nodes
+    }
+
+    private static func snapshotJSON(_ nodes: [BrowserSnapshotNode]) -> String {
+        let rows = nodes.map { ["id": $0.id, "tag": $0.tag, "text": $0.text] }
+        guard let data = try? JSONSerialization.data(withJSONObject: rows, options: [.sortedKeys]) else { return "[]" }
+        return String(decoding: data, as: UTF8.self)
     }
 
     /// CDP exposes accessibility data as a large graph with backend node ids. Keep the
@@ -859,7 +890,14 @@ enum BrowserCDPClient {
         let session = URLSession(configuration: .ephemeral)
         let task = session.webSocketTask(with: url)
         task.resume()
-        defer { task.cancel(with: .goingAway, reason: nil) }
+        defer { task.cancel(with: .goingAway, reason: nil); session.invalidateAndCancel() }
+        return try await sendCommand(method, params: params, task: task)
+    }
+
+    private static func sendCommand(
+        _ method: String, params: [String: Any], task: URLSessionWebSocketTask, isAction: Bool = false
+    ) async throws -> String {
+        if isAction, await !HumanInputWatch.mayPostAnotherEvent() { return await HumanInputWatch.pausedSentence }
         let id = Int.random(in: 1...10_000)
         let payload = encode(method: method, params: params, id: id)
         // CDP is a text-frame protocol. Measured against real Chrome 153 on 2026-09-22:
@@ -910,6 +948,9 @@ enum BrowserCDPClient {
                 throw AgentError.backendUnavailable(String(describing: error))
             }
             if let result = object["result"] as? [String: Any] {
+                if result["exceptionDetails"] != nil {
+                    throw AgentError.backendUnavailable("The browser could not complete the action.")
+                }
                 if let inner = result["result"] as? [String: Any],
                    let value = inner["value"] {
                     return String(describing: value)
