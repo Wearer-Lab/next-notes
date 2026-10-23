@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-23-smart-turn-v30-original-snapshots",
+  "title": "Smart Turn v3.0 original pause snapshots",
+  "date": "2026-10-23",
+  "category": "voice",
+  "status": "partial",
+  "scope": "Official immutable ONNX classifier decisions at six protected-prefix and seven completed-turn sample snapshots; exact original seven WAVs and upstream preprocessing.",
+  "summary": "0/13 wrong decisions; unfinished-prefix errors 0/6. Diagnostic only.",
+  "environment": {
+    "hardware": "16GB Apple M3 MacBook Air, Mac15,12",
+    "os": "macOS27.2 (26B5091g)",
+    "workload": "Serial owned diagnostic processes, original synthetic mono16kHz PCM; no TTS/LLM/microphone/tools.",
+    "power_thermal": "Not sampled; not concurrent voice/reference-machine qualification."
+  },
+  "provenance": {
+    "onnx_sha256": "07a133aba31e2d0b523f17f8c2e4e65efe6d8f685efd12ca4fe21ebf4e798991",
+    "model_revision": "pipecat-ai/smart-turn-v3@f766f81d3cfdf7737ac64aad813d91bbfd56bf93",
+    "runner": "Tools/voice_turn_onnx_reference.py --model <immutable-model>",
+    "fixture": "Exact original fixtures.json and WAV SHA256s retained in source reports.",
+    "precision": "Official v3.0 quantized ONNX (Q/DQ), unlike the fp32 v3.1/v3.2 GPU graphs."
+  },
+  "metrics": [
+    {
+      "name": "wrong snapshot decisions",
+      "value": 0,
+      "unit": "snapshots",
+      "boundary": "Probability at0.5 versus authored incomplete-prefix/completed-turn labels; repeated prefixes are not independent natural accuracy samples.",
+      "samples": 13,
+      "aggregation": "count"
+    }
+  ],
+  "limitations": [
+    "No application/native/audible latency claim.",
+    "Seven synthetic inputs, no held-out human/language/provider/physical qualification.",
+    "Each completed snapshot is final+300ms; full quiet sweep/native consumer are separate records.",
+    "v3.0 uses a different quantized graph; only the structurally identical fp32 v3.1/v3.2 pair isolates the parameter revision."
+  ],
+  "sources": [
+    "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v3.0.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json"
+  ],
+  "publication": {
+    "approved": false,
+    "reviewed_by": null,
+    "reviewed_on": null
+  }
+}

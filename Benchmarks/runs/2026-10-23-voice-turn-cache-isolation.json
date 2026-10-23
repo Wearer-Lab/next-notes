@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-23-voice-turn-cache-isolation",
+  "title": "Voice diagnostic compiler-cache isolation",
+  "date": "2026-10-23",
+  "category": "voice",
+  "status": "partial",
+  "scope": "Seven actual native file replays through dedicated diagnostic bundle ID; same production code/model with external cache before/after and native join.",
+  "summary": "All7 trials commit once through SmartTurn. Five newly created compiler bundles removed after join; shared owner cache unchanged. No application source/model change.",
+  "environment": {
+    "hardware": "16GB Apple M3 MacBook Air, Mac15,12",
+    "os": "macOS27.2 (26B5091g)",
+    "workload": "Paced10ms file input in fresh captures; exclusive native window after full optimized build. No TTS/LLM/tools/physical mic.",
+    "power_thermal": "Not sampled. System swap8263.06MiB unchanged, over8GiB sampler reference limit; not reference resource/concurrent voice qualification."
+  },
+  "provenance": {
+    "source_pins": "Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json",
+    "binary_sha256": "0d577a4c46b50f2ffd61c5b8b98caae34a352b723cd6168b26a5041a4105a673",
+    "model_revision": "v3.1-f766f81-coreml-r1; Silero b419383c55c110e2c9271fa6ee0ea83d03c70d96",
+    "runner": "Tools/voice_turn_benchmark.py collect --repetitions1, dedicated ai.pivotstudio.nextnotes.voiceturn.repair identifier",
+    "fixture": "Exact original seven WAV hashes in native traces; no re-synthesis or easier replacement.",
+    "signature": "Next Notes Local Signing; native21-trial identity/receipt retained. Dedicated diagnostic identity cleanup follow-up separate."
+  },
+  "metrics": [
+    {
+      "name": "owned compiler bundles retired",
+      "value": 5,
+      "unit": "bundles",
+      "boundary": "New dedicated-CFBundleIdentifier cache entries absent at admission, removed only after child join; shared cache preserved.",
+      "samples": 1,
+      "aggregation": "count"
+    }
+  ],
+  "limitations": [
+    "Functional cache-identity/cleanup follow-up, one repeat per original case; not pooled with paired21-trial latency.",
+    "Question wording and all inherited qualification limits remain; opt-in unchanged.",
+    "Initial shared-ID run had no shared-cache admission snapshot; its unknown prior metadata was retained and future shared-ID runs are refused."
+  ],
+  "sources": [
+    "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+    "Tests/Reports/voice-turn-repair-2026-10-23/compiler-identity-fix.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json.receipt.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-verdict.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/shared-cache-before-isolation-check.json"
+  ],
+  "publication": {
+    "approved": false,
+    "reviewed_by": null,
+    "reviewed_on": null
+  }
+}

@@ -1,0 +1,1649 @@
+{
+  "macOS" : "Version 27.2 (Build 26B5091g)",
+  "rows" : [
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "boundary" : "completed-turn",
+      "case" : "complete-question",
+      "inference_ms" : 11.074999999999999,
+      "probability" : 0.98486328125,
+      "sample_end" : 38874,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "boundary" : "completed-turn",
+      "case" : "complete-question",
+      "inference_ms" : 3.3788749999999999,
+      "probability" : 0.98388671875,
+      "sample_end" : 39770,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "boundary" : "completed-turn",
+      "case" : "complete-question",
+      "inference_ms" : 3.471708,
+      "probability" : 0.9833984375,
+      "sample_end" : 40474,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "boundary" : "completed-turn",
+      "case" : "complete-question",
+      "inference_ms" : 2.5689169999999999,
+      "probability" : 0.9833984375,
+      "sample_end" : 42074,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "boundary" : "completed-turn",
+      "case" : "complete-question",
+      "inference_ms" : 4.7384589999999998,
+      "probability" : 0.982421875,
+      "sample_end" : 43610,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "internal-pause",
+      "case" : "pause-200",
+      "inference_ms" : 2.6759590000000002,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "internal-pause",
+      "case" : "pause-200",
+      "inference_ms" : 2.7897500000000002,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "internal-pause",
+      "case" : "pause-200",
+      "inference_ms" : 4.1615830000000003,
+      "probability" : 0.283203125,
+      "sample_end" : 31771,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "completed-turn",
+      "case" : "pause-200",
+      "inference_ms" : 2.6230000000000002,
+      "probability" : 0.9580078125,
+      "sample_end" : 60783,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "completed-turn",
+      "case" : "pause-200",
+      "inference_ms" : 3.449125,
+      "probability" : 0.958984375,
+      "sample_end" : 61679,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "completed-turn",
+      "case" : "pause-200",
+      "inference_ms" : 3.2259169999999999,
+      "probability" : 0.9423828125,
+      "sample_end" : 62383,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "completed-turn",
+      "case" : "pause-200",
+      "inference_ms" : 4.9778330000000004,
+      "probability" : 0.88232421875,
+      "sample_end" : 63983,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "boundary" : "completed-turn",
+      "case" : "pause-200",
+      "inference_ms" : 2.6708340000000002,
+      "probability" : 0.6865234375,
+      "sample_end" : 65519,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.5856249999999998,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.428166,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.4280409999999999,
+      "probability" : 0.447265625,
+      "sample_end" : 32156,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.417875,
+      "probability" : 0.28955078125,
+      "sample_end" : 32668,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.5723750000000001,
+      "probability" : 0.260986328125,
+      "sample_end" : 33180,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.632625,
+      "probability" : 0.1690673828125,
+      "sample_end" : 33692,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 3.6923330000000001,
+      "probability" : 0.17333984375,
+      "sample_end" : 34204,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 4.7878340000000001,
+      "probability" : 0.37939453125,
+      "sample_end" : 34716,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "internal-pause",
+      "case" : "pause-400",
+      "inference_ms" : 2.3740000000000001,
+      "probability" : 0.26025390625,
+      "sample_end" : 34971,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "completed-turn",
+      "case" : "pause-400",
+      "inference_ms" : 2.37825,
+      "probability" : 0.9140625,
+      "sample_end" : 63983,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "completed-turn",
+      "case" : "pause-400",
+      "inference_ms" : 5.1506249999999998,
+      "probability" : 0.85888671875,
+      "sample_end" : 64879,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "completed-turn",
+      "case" : "pause-400",
+      "inference_ms" : 2.582792,
+      "probability" : 0.88720703125,
+      "sample_end" : 65583,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "completed-turn",
+      "case" : "pause-400",
+      "inference_ms" : 6.6994579999999999,
+      "probability" : 0.802734375,
+      "sample_end" : 67183,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "boundary" : "completed-turn",
+      "case" : "pause-400",
+      "inference_ms" : 2.6157499999999998,
+      "probability" : 0.4013671875,
+      "sample_end" : 68719,
+      "semantic_correct" : false,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 2.4824160000000002,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 2.7965840000000002,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 3.8124169999999999,
+      "probability" : 0.447265625,
+      "sample_end" : 32156,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 16.674958,
+      "probability" : 0.28955078125,
+      "sample_end" : 32668,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 11.856166999999999,
+      "probability" : 0.260986328125,
+      "sample_end" : 33180,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 6.8027499999999996,
+      "probability" : 0.1690673828125,
+      "sample_end" : 33692,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 28.061375000000002,
+      "probability" : 0.17333984375,
+      "sample_end" : 34204,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 14.520917000000001,
+      "probability" : 0.37939453125,
+      "sample_end" : 34716,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 7.0604170000000002,
+      "probability" : 0.1552734375,
+      "sample_end" : 35228,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 5.6008750000000003,
+      "probability" : 0.2369384765625,
+      "sample_end" : 35740,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 5.563917,
+      "probability" : 0.046234130859375,
+      "sample_end" : 36252,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 3.7573750000000001,
+      "probability" : 0.02728271484375,
+      "sample_end" : 36764,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 8.2115829999999992,
+      "probability" : 0.03582763671875,
+      "sample_end" : 37276,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 3.3597920000000001,
+      "probability" : 0.0218353271484375,
+      "sample_end" : 37788,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "internal-pause",
+      "case" : "pause-600",
+      "inference_ms" : 6.4849579999999998,
+      "probability" : 0.0214385986328125,
+      "sample_end" : 38171,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "completed-turn",
+      "case" : "pause-600",
+      "inference_ms" : 10.878833,
+      "probability" : 0.8134765625,
+      "sample_end" : 67183,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "completed-turn",
+      "case" : "pause-600",
+      "inference_ms" : 2.5915409999999999,
+      "probability" : 0.8017578125,
+      "sample_end" : 68079,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "completed-turn",
+      "case" : "pause-600",
+      "inference_ms" : 9.2031659999999995,
+      "probability" : 0.833984375,
+      "sample_end" : 68783,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "completed-turn",
+      "case" : "pause-600",
+      "inference_ms" : 2.5197080000000001,
+      "probability" : 0.75,
+      "sample_end" : 70383,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "boundary" : "completed-turn",
+      "case" : "pause-600",
+      "inference_ms" : 2.5455839999999998,
+      "probability" : 0.272705078125,
+      "sample_end" : 71919,
+      "semantic_correct" : false,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.4832920000000001,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.672625,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.6350410000000002,
+      "probability" : 0.447265625,
+      "sample_end" : 32156,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 4.6123750000000001,
+      "probability" : 0.28955078125,
+      "sample_end" : 32668,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 4.2523330000000001,
+      "probability" : 0.260986328125,
+      "sample_end" : 33180,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.6949580000000002,
+      "probability" : 0.1690673828125,
+      "sample_end" : 33692,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.528416,
+      "probability" : 0.17333984375,
+      "sample_end" : 34204,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 3.4261249999999999,
+      "probability" : 0.37939453125,
+      "sample_end" : 34716,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.5871249999999999,
+      "probability" : 0.1552734375,
+      "sample_end" : 35228,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 3.4835419999999999,
+      "probability" : 0.2369384765625,
+      "sample_end" : 35740,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.4245830000000002,
+      "probability" : 0.046234130859375,
+      "sample_end" : 36252,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 4.5267499999999998,
+      "probability" : 0.02728271484375,
+      "sample_end" : 36764,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.398625,
+      "probability" : 0.03582763671875,
+      "sample_end" : 37276,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.5357910000000001,
+      "probability" : 0.0218353271484375,
+      "sample_end" : 37788,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.6567919999999998,
+      "probability" : 0.026611328125,
+      "sample_end" : 38300,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.8503750000000001,
+      "probability" : 0.015472412109375,
+      "sample_end" : 38812,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.7436250000000002,
+      "probability" : 0.0188751220703125,
+      "sample_end" : 39324,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.7839170000000002,
+      "probability" : 0.018829345703125,
+      "sample_end" : 39836,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.7164999999999999,
+      "probability" : 0.02435302734375,
+      "sample_end" : 40348,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.73875,
+      "probability" : 0.1136474609375,
+      "sample_end" : 40860,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.9790420000000002,
+      "probability" : 0.032073974609375,
+      "sample_end" : 41372,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.8476249999999999,
+      "probability" : 0.043670654296875,
+      "sample_end" : 41884,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.708167,
+      "probability" : 0.03851318359375,
+      "sample_end" : 42396,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 7.4725419999999998,
+      "probability" : 0.025909423828125,
+      "sample_end" : 42908,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "internal-pause",
+      "case" : "pause-900",
+      "inference_ms" : 2.4844590000000002,
+      "probability" : 0.0295257568359375,
+      "sample_end" : 42971,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "completed-turn",
+      "case" : "pause-900",
+      "inference_ms" : 2.4798330000000002,
+      "probability" : 0.56640625,
+      "sample_end" : 71983,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "completed-turn",
+      "case" : "pause-900",
+      "inference_ms" : 2.6284999999999998,
+      "probability" : 0.409912109375,
+      "sample_end" : 72879,
+      "semantic_correct" : false,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "completed-turn",
+      "case" : "pause-900",
+      "inference_ms" : 2.4684159999999999,
+      "probability" : 0.6103515625,
+      "sample_end" : 73583,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "completed-turn",
+      "case" : "pause-900",
+      "inference_ms" : 2.4819580000000001,
+      "probability" : 0.83056640625,
+      "sample_end" : 75183,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "boundary" : "completed-turn",
+      "case" : "pause-900",
+      "inference_ms" : 2.5264169999999999,
+      "probability" : 0.5888671875,
+      "sample_end" : 76719,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.5594169999999998,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 3.7949160000000002,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.6754169999999999,
+      "probability" : 0.447265625,
+      "sample_end" : 32156,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 3.3381660000000002,
+      "probability" : 0.28955078125,
+      "sample_end" : 32668,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 29.490708000000001,
+      "probability" : 0.260986328125,
+      "sample_end" : 33180,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 13.465209,
+      "probability" : 0.1690673828125,
+      "sample_end" : 33692,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 8.0280000000000005,
+      "probability" : 0.17333984375,
+      "sample_end" : 34204,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.9566659999999998,
+      "probability" : 0.37939453125,
+      "sample_end" : 34716,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 5.9804170000000001,
+      "probability" : 0.1552734375,
+      "sample_end" : 35228,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 8.5759170000000005,
+      "probability" : 0.2369384765625,
+      "sample_end" : 35740,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 12.589916000000001,
+      "probability" : 0.046234130859375,
+      "sample_end" : 36252,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 11.536167000000001,
+      "probability" : 0.02728271484375,
+      "sample_end" : 36764,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 11.539125,
+      "probability" : 0.03582763671875,
+      "sample_end" : 37276,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 9.1797920000000008,
+      "probability" : 0.0218353271484375,
+      "sample_end" : 37788,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 5.4747079999999997,
+      "probability" : 0.026611328125,
+      "sample_end" : 38300,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 7.6741250000000001,
+      "probability" : 0.015472412109375,
+      "sample_end" : 38812,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.8670420000000001,
+      "probability" : 0.0188751220703125,
+      "sample_end" : 39324,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.4347500000000002,
+      "probability" : 0.018829345703125,
+      "sample_end" : 39836,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.452375,
+      "probability" : 0.02435302734375,
+      "sample_end" : 40348,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.49275,
+      "probability" : 0.1136474609375,
+      "sample_end" : 40860,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.5346250000000001,
+      "probability" : 0.032073974609375,
+      "sample_end" : 41372,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 4.0165420000000003,
+      "probability" : 0.043670654296875,
+      "sample_end" : 41884,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.7555420000000002,
+      "probability" : 0.03851318359375,
+      "sample_end" : 42396,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.4652500000000002,
+      "probability" : 0.025909423828125,
+      "sample_end" : 42908,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.4341249999999999,
+      "probability" : 0.0997314453125,
+      "sample_end" : 43420,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.387041,
+      "probability" : 0.0738525390625,
+      "sample_end" : 43932,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.67075,
+      "probability" : 0.24658203125,
+      "sample_end" : 44444,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 4.6051250000000001,
+      "probability" : 0.24072265625,
+      "sample_end" : 44956,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.9055,
+      "probability" : 0.049774169921875,
+      "sample_end" : 45468,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 11.440083,
+      "probability" : 0.10516357421875,
+      "sample_end" : 45980,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 3.2582909999999998,
+      "probability" : 0.0267486572265625,
+      "sample_end" : 46492,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.611583,
+      "probability" : 0.0273284912109375,
+      "sample_end" : 47004,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 2.4207909999999999,
+      "probability" : 0.0205535888671875,
+      "sample_end" : 47516,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "internal-pause",
+      "case" : "pause-1200",
+      "inference_ms" : 3.2370830000000002,
+      "probability" : 0.0124664306640625,
+      "sample_end" : 47771,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "completed-turn",
+      "case" : "pause-1200",
+      "inference_ms" : 3.9249999999999998,
+      "probability" : 0.93359375,
+      "sample_end" : 76783,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "completed-turn",
+      "case" : "pause-1200",
+      "inference_ms" : 2.7534160000000001,
+      "probability" : 0.91748046875,
+      "sample_end" : 77679,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "completed-turn",
+      "case" : "pause-1200",
+      "inference_ms" : 2.867375,
+      "probability" : 0.94140625,
+      "sample_end" : 78383,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "completed-turn",
+      "case" : "pause-1200",
+      "inference_ms" : 3.1017079999999999,
+      "probability" : 0.77099609375,
+      "sample_end" : 79983,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "boundary" : "completed-turn",
+      "case" : "pause-1200",
+      "inference_ms" : 2.4192499999999999,
+      "probability" : 0.6767578125,
+      "sample_end" : 81519,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5317500000000002,
+      "probability" : 0.1923828125,
+      "sample_end" : 31132,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4490419999999999,
+      "probability" : 0.12353515625,
+      "sample_end" : 31644,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.7102499999999998,
+      "probability" : 0.447265625,
+      "sample_end" : 32156,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.9215420000000001,
+      "probability" : 0.28955078125,
+      "sample_end" : 32668,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.9830830000000002,
+      "probability" : 0.260986328125,
+      "sample_end" : 33180,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.832417,
+      "probability" : 0.1690673828125,
+      "sample_end" : 33692,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.654042,
+      "probability" : 0.17333984375,
+      "sample_end" : 34204,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4526659999999998,
+      "probability" : 0.37939453125,
+      "sample_end" : 34716,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.924166,
+      "probability" : 0.1552734375,
+      "sample_end" : 35228,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.6309999999999998,
+      "probability" : 0.2369384765625,
+      "sample_end" : 35740,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.726416,
+      "probability" : 0.046234130859375,
+      "sample_end" : 36252,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 6.3729170000000002,
+      "probability" : 0.02728271484375,
+      "sample_end" : 36764,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.6975410000000002,
+      "probability" : 0.03582763671875,
+      "sample_end" : 37276,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.7403330000000001,
+      "probability" : 0.0218353271484375,
+      "sample_end" : 37788,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5826250000000002,
+      "probability" : 0.026611328125,
+      "sample_end" : 38300,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.6270410000000002,
+      "probability" : 0.015472412109375,
+      "sample_end" : 38812,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5631659999999998,
+      "probability" : 0.0188751220703125,
+      "sample_end" : 39324,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.3701249999999998,
+      "probability" : 0.018829345703125,
+      "sample_end" : 39836,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4632499999999999,
+      "probability" : 0.02435302734375,
+      "sample_end" : 40348,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 3.8448329999999999,
+      "probability" : 0.1136474609375,
+      "sample_end" : 40860,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.582792,
+      "probability" : 0.032073974609375,
+      "sample_end" : 41372,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 7.3219589999999997,
+      "probability" : 0.043670654296875,
+      "sample_end" : 41884,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5077919999999998,
+      "probability" : 0.03851318359375,
+      "sample_end" : 42396,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.479708,
+      "probability" : 0.025909423828125,
+      "sample_end" : 42908,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 3.4276249999999999,
+      "probability" : 0.0997314453125,
+      "sample_end" : 43420,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4107500000000002,
+      "probability" : 0.0738525390625,
+      "sample_end" : 43932,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4397500000000001,
+      "probability" : 0.24658203125,
+      "sample_end" : 44444,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.399375,
+      "probability" : 0.24072265625,
+      "sample_end" : 44956,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.3550420000000001,
+      "probability" : 0.049774169921875,
+      "sample_end" : 45468,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.3831250000000002,
+      "probability" : 0.10516357421875,
+      "sample_end" : 45980,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.3816250000000001,
+      "probability" : 0.0267486572265625,
+      "sample_end" : 46492,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4735,
+      "probability" : 0.0273284912109375,
+      "sample_end" : 47004,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5487500000000001,
+      "probability" : 0.0205535888671875,
+      "sample_end" : 47516,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 4.0783750000000003,
+      "probability" : 0.01224517822265625,
+      "sample_end" : 48028,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.513042,
+      "probability" : 0.016845703125,
+      "sample_end" : 48540,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5090840000000001,
+      "probability" : 0.01312255859375,
+      "sample_end" : 49052,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 3.6282920000000001,
+      "probability" : 0.0179290771484375,
+      "sample_end" : 49564,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4838339999999999,
+      "probability" : 0.09503173828125,
+      "sample_end" : 50076,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 3.2819579999999999,
+      "probability" : 0.134033203125,
+      "sample_end" : 50588,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5109159999999999,
+      "probability" : 0.361572265625,
+      "sample_end" : 51100,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.716208,
+      "probability" : 0.134033203125,
+      "sample_end" : 51612,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 5.5917919999999999,
+      "probability" : 0.1085205078125,
+      "sample_end" : 52124,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "internal-pause",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4623330000000001,
+      "probability" : 0.255615234375,
+      "sample_end" : 52571,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "completed-turn",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4828329999999998,
+      "probability" : 0.93017578125,
+      "sample_end" : 81583,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "completed-turn",
+      "case" : "pause-1500",
+      "inference_ms" : 2.4774579999999999,
+      "probability" : 0.90234375,
+      "sample_end" : 82479,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "completed-turn",
+      "case" : "pause-1500",
+      "inference_ms" : 2.704167,
+      "probability" : 0.89892578125,
+      "sample_end" : 83183,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "completed-turn",
+      "case" : "pause-1500",
+      "inference_ms" : 2.6612089999999999,
+      "probability" : 0.8984375,
+      "sample_end" : 84783,
+      "semantic_correct" : true,
+      "trial" : 0
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "boundary" : "completed-turn",
+      "case" : "pause-1500",
+      "inference_ms" : 2.5204589999999998,
+      "probability" : 0.55126953125,
+      "sample_end" : 86319,
+      "semantic_correct" : true,
+      "trial" : 0
+    }
+  ],
+  "schema" : "nextnotes.turn-model-probe.v1",
+  "scope" : "Native production CoreML graph component replay; no ASR, microphone, playback, LLM or effects. Semantic snapshots are unpaced; Silero32ms frames are paced.",
+  "silero_revision" : "b419383c55c110e2c9271fa6ee0ea83d03c70d96",
+  "smart_revision" : "v3.1-f766f81-coreml-r1"
+}

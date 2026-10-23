@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-23-voice-turn-asr-eou-diagnostic",
+  "title": "Native ASR EOU pause diagnostic",
+  "date": "2026-10-23",
+  "category": "voice",
+  "status": "failed",
+  "scope": "Actual pinned StreamingEouAsrManager160ms feed at debounce0/320; original exact WAVs, unpaced sample-position callback observations.",
+  "summary": "Confirmed/debounced EOU still fires inside long protected pauses. Rejected as an added endpoint gate.",
+  "environment": {
+    "hardware": "16GB Apple M3 MacBook Air, Mac15,12",
+    "os": "macOS27.2 (26B5091g)",
+    "workload": "Serial owned diagnostic processes, original synthetic mono16kHz PCM; no TTS/LLM/microphone/tools.",
+    "power_thermal": "Not sampled; not concurrent voice/reference-machine qualification."
+  },
+  "provenance": {
+    "runner": "Tools/VoiceTurnEOUProbe.swift via Tools/build_asr_probe.py",
+    "model": "Existing cached pinned Parakeet EOU160ms assets; file hashes in evidence.",
+    "scope": "Diagnostic alternative rejected; actual product ASR settings unchanged."
+  },
+  "metrics": [],
+  "limitations": [
+    "Public EOU is a sticky confirmed/debounced flag, not raw per-shift decoder output.",
+    "Unpaced sample positions do not measure wall-clock user latency.",
+    "No extra EOU conjunction, SDK edit or debounce change adopted."
+  ],
+  "sources": [
+    "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+    "Tests/Reports/voice-turn-repair-2026-10-23/eou-native.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/eou-native-receipt.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/eou-probe-build.json"
+  ],
+  "publication": {
+    "approved": false,
+    "reviewed_by": null,
+    "reviewed_on": null
+  }
+}

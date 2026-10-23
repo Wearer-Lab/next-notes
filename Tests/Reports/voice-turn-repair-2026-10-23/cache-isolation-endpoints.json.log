@@ -1,0 +1,385 @@
+VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=5.0583930015563965s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=2.9921531677246094e-05s lag=2.09808349609375e-05s
+VOICE_MODEL_PARTIAL=voice+0.456s text=what apple=false
+VOICE_MODEL_PARTIAL_FILTERED=what
+VOICE_MODEL_PARTIAL=voice+0.531s text=what time apple=false
+VOICE_MODEL_PARTIAL_FILTERED=what time
+VOICE_MODEL_PARTIAL=voice+0.692s text=what time is apple=false
+VOICE_MODEL_PARTIAL_FILTERED=what time is
+VOICE_MODEL_PARTIAL=voice+0.783s text=what time is it apple=false
+VOICE_MODEL_PARTIAL_FILTERED=what time is it
+VOICE_APPLE_FIRST_RESULT=voice+0.887s text=What
+VOICE_MODEL_PARTIAL=voice+0.928s text=what time is it in apple=true
+VOICE_MODEL_PARTIAL_FILTERED=what time is it in
+VOICE_MODEL_PARTIAL=voice+1.090s text=what time is it in tot apple=true
+VOICE_MODEL_PARTIAL_FILTERED=what time is it in tot
+VOICE_MODEL_PARTIAL=voice+1.409s text=what time is it in totio apple=true
+VOICE_MODEL_PARTIAL_FILTERED=what time is it in totio
+VOICE_MODEL_PARTIAL=voice+1.835s text=what time is it in totio rid apple=true
+VOICE_MODEL_PARTIAL_FILTERED=what time is it in totio rid
+VOICE_MODEL_PARTIAL=voice+1.884s text=what time is it in totio riding now apple=true
+VOICE_MODEL_PARTIAL_FILTERED=what time is it in totio riding now
+VOICE_FILE_MAX_PACING_LAG=0.020437375 seconds
+VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.0001850128173828125s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=1.2040138244628906e-05s lag=1.5020370483398438e-05s
+VOICE_MODEL_PARTIAL=voice+0.293s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.531s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.691s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.851s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.888s text=I
+VOICE_MODEL_PARTIAL=voice+1.171s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.407s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+2.216s text=i want to book a table for f apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for f
+VOICE_MODEL_PARTIAL=voice+2.290s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+2.451s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+2.611s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+2.932s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+3.242s text=i want to book a table for four people tomorrow even apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow even
+VOICE_MODEL_PARTIAL=voice+3.322s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+VOICE_FILE_MAX_PACING_LAG=0.005529 seconds
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#1) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#1) legacy=nil
+TURN_TRIAL complete-question 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.00011301040649414062s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=2.7060508728027344e-05s lag=5.0067901611328125e-05s
+VOICE_MODEL_PARTIAL=voice+0.315s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.527s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.696s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.853s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.890s text=I
+VOICE_MODEL_PARTIAL=voice+1.172s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.408s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+2.452s text=i want to book a table for f apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for f
+VOICE_MODEL_PARTIAL=voice+2.532s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+2.691s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+2.770s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+3.012s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+3.489s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+VOICE_FILE_MAX_PACING_LAG=0.014383542 seconds
+VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.00014400482177734375s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=1.0013580322265625e-05s lag=1.6927719116210938e-05s
+VOICE_MODEL_PARTIAL=voice+0.288s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.533s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.693s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.850s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.885s text=I
+VOICE_MODEL_PARTIAL=voice+1.171s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.409s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_EOU=sinceVoiceEnd 0.007s appleRevisionAge 0.677s text=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+2.685s text=i want to book a table for f apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for f
+VOICE_MODEL_PARTIAL=voice+2.765s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+2.846s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+3.010s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+3.171s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+3.652s text=i want to book a table for four people tomorrow even apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow even
+VOICE_MODEL_PARTIAL=voice+3.734s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+VOICE_FILE_MAX_PACING_LAG=0.011873834 seconds
+turn#2) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#2) legacy=nil
+TURN_TRIAL pause-200 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#3) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#3) legacy=nil
+TURN_TRIAL pause-400 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOIVOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.0002549886703491211s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=9.059906005859375e-06s lag=1.5020370483398438e-05s
+VOICE_MODEL_PARTIAL=voice+0.289s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.531s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.690s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.847s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.888s text=I
+VOICE_MODEL_PARTIAL=voice+1.171s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.408s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_EOU=sinceVoiceEnd 0.988s appleRevisionAge 0.692s text=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+3.091s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+3.172s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+3.255s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+3.493s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+3.974s text=i want to book a table for four people tomorrow even apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow even
+VOICE_MODEL_PARTIAL=voice+4.057s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+VOICE_FILE_MAX_PACING_LAG=0.005209833 seconds
+VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.00017893314361572266s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=2.09808349609375e-05s lag=2.002716064453125e-05s
+VOICE_MODEL_PARTIAL=voice+0.283s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.532s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.694s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.844s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.889s text=I
+VOICE_MODEL_PARTIAL=voice+1.171s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.413s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_EOU=sinceVoiceEnd 0.983s appleRevisionAge 0.685s text=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+3.253s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+3.486s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+3.570s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+3.813s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+4.290s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+CE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#4) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#4) legacy=nil
+TURN_TRIAL pause-600 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#5) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#5) legacy=nil
+TURN_TRIAL pause-900 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE:VOICE_FILE_MAX_PACING_LAG=0.005433375 seconds
+VOICE_INPUT_FORMAT=canonical Float32/16000/mono; Apple 3/16000.0/1
+VOICE_EOU_PREPARE=0.00015401840209960938s
+VOICE_EOU_STARTUP_BUFFERED=0 chunks / 0 frames
+VOICE_FILE_FEED_CADENCE=10ms
+VOICE_EOU_FIRST_PROCESS=7.987022399902344e-06s lag=1.4066696166992188e-05s
+VOICE_MODEL_PARTIAL=voice+0.290s text=i apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i
+VOICE_MODEL_PARTIAL=voice+0.532s text=i want to apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to
+VOICE_MODEL_PARTIAL=voice+0.691s text=i want to book apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book
+VOICE_MODEL_PARTIAL=voice+0.855s text=i want to book a apple=false
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a
+VOICE_APPLE_FIRST_RESULT=voice+0.889s text=I
+VOICE_MODEL_PARTIAL=voice+1.174s text=i want to book a table apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table
+VOICE_MODEL_PARTIAL=voice+1.414s text=i want to book a table for apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for
+VOICE_MODEL_EOU=sinceVoiceEnd 0.981s appleRevisionAge 0.689s text=i want to book a table for
+VOICE_MODEL_PARTIAL=voice+3.413s text=i want to book a table for four apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four
+VOICE_MODEL_PARTIAL=voice+3.732s text=i want to book a table for four people apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people
+VOICE_MODEL_PARTIAL=voice+3.890s text=i want to book a table for four people to apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people to
+VOICE_MODEL_PARTIAL=voice+4.136s text=i want to book a table for four people tomorrow apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow
+VOICE_MODEL_PARTIAL=voice+4.532s text=i want to book a table for four people tomorrow even apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow even
+VOICE_MODEL_PARTIAL=voice+4.610s text=i want to book a table for four people tomorrow evening apple=true
+VOICE_MODEL_PARTIAL_FILTERED=i want to book a table for four people tomorrow evening
+VOICE_FILE_MAX_PACING_LAG=0.0055325 seconds
+ field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#6) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#6) legacy=nil
+TURN_TRIAL pause-1200 0 commits=1 source=smartTurn
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=timer reducer=Optional(turn#7) legacy=nil
+VOICE_SESSION_DIVERGENCE: field=turnPending event=inputWithdrawn reducer=Optional(turn#7) legacy=nil
+TURN_TRIAL pause-1500 0 commits=1 source=smartTurn
+TURN_BENCHMARK_COLLECTED

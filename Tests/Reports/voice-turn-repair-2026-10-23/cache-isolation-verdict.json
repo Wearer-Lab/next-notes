@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "shared_owner_cache_unchanged": true,
+  "diagnostic_compiler_bundles_removed": [
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/1438B5B5F42F696C7149B7C4D7C7F0B4754B507DC56FAA33272DBE534877E3AC/FBD677A2781EB3CF77E59C16CDEF4068A684589435D97989A2C5A66AA5FF09E9.bundle",
+      "logicalBytes": 986504
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/7F59AA8BE92F91817D1C832E433DC5CD974B35F6D706AF5A29D7147D14E7A179/D8155CCF994EC782C67760D05D807197051AB5E983D71B532EB686E77ED95645.bundle",
+      "logicalBytes": 212748988
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/A4E83E2591D18F62B288A2B9B0E21DAC5CC75BD375B8B15BD604E8813908BF1E/8EC404B75A50A867649E3C2793D0CE9E2A8D5335D85EE2B0E4A0F1C260419E76.bundle",
+      "logicalBytes": 774081
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/AE1737B0251780D37BDEC79F59C9930E11129E27B75760DEF324F4ADF9277493/23435607D11536554BDC69CE02D441AEF59865B06BC66F0E2A74D02ABED2CC95.bundle",
+      "logicalBytes": 7900832
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/F0282C97446B76E6E4A19366C3BFB3F24BAC9B14E98D533A7E740EC5BF983B44/67131F7702655BFECD3E25C0AF04413121E11990B6968D1A185A8D6A372421EA.bundle",
+      "logicalBytes": 2985536
+    }
+  ],
+  "trials": 7,
+  "scope": "One repetition of each original WAV through dedicated bundle identifier; functional cache-isolation check, not pooled latency/held-out acceptance."
+}

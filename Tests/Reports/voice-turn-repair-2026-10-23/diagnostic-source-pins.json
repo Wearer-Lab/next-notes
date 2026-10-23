@@ -1,0 +1,14 @@
+{
+  "timestamp": 1792742481.1166542,
+  "files": {
+    "Tools/voice_turn_benchmark.py": "6a184321541b2242751d5df35024372ac42153d402bc42daf9510e1e44231cbd",
+    "Tools/voice_turn_onnx_reference.py": "2a5488065aba933280108c65e497558e501dbebcea05e3299b6757ffdbaf98bd",
+    "Tools/export_smart_turn_v31.py": "f30d9b86682a98262e6ef51617138a51920a8140ea90a4b12aeea55f6293231d",
+    "Tools/VoiceTurnNativeProbe.swift": "2169c73f966ca66a07878cb916ad8186e7fd59d90502c907a617b244832cfcb5",
+    "Tools/VoiceTurnEOUProbe.swift": "f21081d9efc6d926fef7393e89d7657af2493cf8a65a140c311410c797a66948",
+    "Tools/build_asr_probe.py": "d57f439b98b3842daf65e86df33c3a88733e53c1b1e632b0e62a4adc4b25ea85",
+    "Tools/VoiceTurnProbeSupport.swift": "0979b70234bb7a80e4745cd1f0f73ef266d9ddfaaa6311aa37303f7a8a7e0bbc",
+    "Scripts/model-bench.py": "7ba56549ae6e1e34e15b7912b1027ea306c11afe0c31580ed322f804d06458ae",
+    "Tools/tts_asr_workload.py": "a4e6908ade2f9a198a13837a1d8b129c25ce0500b948084f19c9d145f4191613"
+  }
+}

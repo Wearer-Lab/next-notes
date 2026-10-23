@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "Tools/voice_turn_benchmark.py",
+    "compare",
+    "--before",
+    "Tests/Reports/voice-turn-2026-10-23/native-endpoints.json",
+    "--after",
+    "Tests/Reports/voice-turn-2026-10-23/native-endpoints.json",
+    "--output",
+    "Tests/Reports/voice-turn-repair-2026-10-23/comparison-original-red.json"
+  ],
+  "exit": 1,
+  "expected_exit": 1,
+  "asserted_original_failure": true
+}

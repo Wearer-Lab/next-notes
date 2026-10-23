@@ -1,0 +1,586 @@
+{
+  "schema": "nextnotes.smart-turn-reweight.v1",
+  "parameters": [
+    {
+      "parameter": "classifier_encoder_conv1_weight",
+      "upstream_initializer": "inner.encoder.conv1.weight",
+      "transpose": false,
+      "elements": 92160,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_conv1_bias",
+      "upstream_initializer": "inner.encoder.conv1.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_conv2_weight",
+      "upstream_initializer": "inner.encoder.conv2.weight",
+      "transpose": false,
+      "elements": 442368,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_conv2_bias",
+      "upstream_initializer": "inner.encoder.conv2.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_embed_positions_weight",
+      "upstream_initializer": "inner.encoder.embed_positions.weight",
+      "transpose": false,
+      "elements": 153600,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_v_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.0.self_attn.v_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_q_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.0.self_attn.q_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_out_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.0.self_attn.out_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.0.self_attn_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.0.self_attn_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_fc1_bias",
+      "upstream_initializer": "inner.encoder.layers.0.fc1.bias",
+      "transpose": false,
+      "elements": 1536,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_fc2_bias",
+      "upstream_initializer": "inner.encoder.layers.0.fc2.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_final_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.0.final_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_final_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.0.final_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_v_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.1.self_attn.v_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_q_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.1.self_attn.q_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_out_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.1.self_attn.out_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.1.self_attn_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.1.self_attn_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_fc1_bias",
+      "upstream_initializer": "inner.encoder.layers.1.fc1.bias",
+      "transpose": false,
+      "elements": 1536,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_fc2_bias",
+      "upstream_initializer": "inner.encoder.layers.1.fc2.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_final_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.1.final_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_final_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.1.final_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_v_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.2.self_attn.v_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_q_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.2.self_attn.q_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_out_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.2.self_attn.out_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.2.self_attn_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.2.self_attn_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_fc1_bias",
+      "upstream_initializer": "inner.encoder.layers.2.fc1.bias",
+      "transpose": false,
+      "elements": 1536,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_fc2_bias",
+      "upstream_initializer": "inner.encoder.layers.2.fc2.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_final_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.2.final_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_final_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.2.final_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_v_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.3.self_attn.v_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_q_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.3.self_attn.q_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_out_proj_bias",
+      "upstream_initializer": "inner.encoder.layers.3.self_attn.out_proj.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.3.self_attn_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.3.self_attn_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_fc1_bias",
+      "upstream_initializer": "inner.encoder.layers.3.fc1.bias",
+      "transpose": false,
+      "elements": 1536,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_fc2_bias",
+      "upstream_initializer": "inner.encoder.layers.3.fc2.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_final_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layers.3.final_layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_final_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layers.3.final_layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layer_norm_weight",
+      "upstream_initializer": "inner.encoder.layer_norm.weight",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layer_norm_bias",
+      "upstream_initializer": "inner.encoder.layer_norm.bias",
+      "transpose": false,
+      "elements": 384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_pool_attention_0_bias",
+      "upstream_initializer": "inner.pool_attention.0.bias",
+      "transpose": false,
+      "elements": 256,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_pool_attention_2_bias",
+      "upstream_initializer": "inner.pool_attention.2.bias",
+      "transpose": false,
+      "elements": 1,
+      "storage": "inline"
+    },
+    {
+      "parameter": "classifier_classifier_0_weight",
+      "upstream_initializer": "inner.classifier.0.weight",
+      "transpose": false,
+      "elements": 98304,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_0_bias",
+      "upstream_initializer": "inner.classifier.0.bias",
+      "transpose": false,
+      "elements": 256,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_1_weight",
+      "upstream_initializer": "inner.classifier.1.weight",
+      "transpose": false,
+      "elements": 256,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_1_bias",
+      "upstream_initializer": "inner.classifier.1.bias",
+      "transpose": false,
+      "elements": 256,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_4_weight",
+      "upstream_initializer": "inner.classifier.4.weight",
+      "transpose": false,
+      "elements": 16384,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_4_bias",
+      "upstream_initializer": "inner.classifier.4.bias",
+      "transpose": false,
+      "elements": 64,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_6_weight",
+      "upstream_initializer": "inner.classifier.6.weight",
+      "transpose": false,
+      "elements": 64,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_classifier_6_bias",
+      "upstream_initializer": "inner.classifier.6.bias",
+      "transpose": false,
+      "elements": 1,
+      "storage": "inline"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_q_proj_weight",
+      "upstream_initializer": "val_17",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_v_proj_weight",
+      "upstream_initializer": "val_32",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_out_proj_weight",
+      "upstream_initializer": "val_75",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_fc1_weight",
+      "upstream_initializer": "val_79",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_fc2_weight",
+      "upstream_initializer": "val_88",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_q_proj_weight",
+      "upstream_initializer": "val_92",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_v_proj_weight",
+      "upstream_initializer": "val_107",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_out_proj_weight",
+      "upstream_initializer": "val_148",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_fc1_weight",
+      "upstream_initializer": "val_152",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_fc2_weight",
+      "upstream_initializer": "val_161",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_q_proj_weight",
+      "upstream_initializer": "val_165",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_v_proj_weight",
+      "upstream_initializer": "val_180",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_out_proj_weight",
+      "upstream_initializer": "val_221",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_fc1_weight",
+      "upstream_initializer": "val_225",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_fc2_weight",
+      "upstream_initializer": "val_234",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_q_proj_weight",
+      "upstream_initializer": "val_238",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_v_proj_weight",
+      "upstream_initializer": "val_253",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_out_proj_weight",
+      "upstream_initializer": "val_294",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_fc1_weight",
+      "upstream_initializer": "val_298",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_fc2_weight",
+      "upstream_initializer": "val_307",
+      "transpose": true,
+      "elements": 589824,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_pool_attention_0_weight",
+      "upstream_initializer": "val_311",
+      "transpose": true,
+      "elements": 98304,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_pool_attention_2_weight",
+      "upstream_initializer": "val_313",
+      "transpose": true,
+      "elements": 256,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_0_self_attn_k_proj_weight",
+      "upstream_initializer": "val_25",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_1_self_attn_k_proj_weight",
+      "upstream_initializer": "val_100",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_2_self_attn_k_proj_weight",
+      "upstream_initializer": "val_173",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    },
+    {
+      "parameter": "classifier_encoder_layers_3_self_attn_k_proj_weight",
+      "upstream_initializer": "val_246",
+      "transpose": true,
+      "elements": 147456,
+      "storage": "blob"
+    }
+  ],
+  "learned_elements": 8000386,
+  "source_pins": {
+    "v31": "a32f7445d5076029472b6c9f7a71005df576ea19d5f929021200f535b962af84",
+    "v32": "ab8dc64b88713f90b571c15b714bd1330e6c883cad8763dacf65c9376dc539be",
+    "model.mil": "41a6d9ac0f7d01d738e56ecdf4435e55f139591541b7cf1a4dba6b9ce2f1c9ef",
+    "weights/weight.bin": "b6295316741a0149e1fcab7cdf030e1b9bfb0eef778207accee91a2a9703a39c",
+    "coremldata.bin": "9245ac99889c9d738cba6c89da9e851fd16488bf8effbc15a109d06b401c9383",
+    "analytics/coremldata.bin": "1646746d0029e78d26be065e62602d4f89e51013ec238b653adf7d7d21057f89"
+  },
+  "output": {
+    "model.mil": {
+      "bytes": 69987,
+      "sha256": "71d7ce28a6d8d86c1ea5287bd15073ecbd491ec9c1e5c0c8c8d2ecb8b267df3b"
+    },
+    "weights/weight.bin": {
+      "bytes": 16714240,
+      "sha256": "ec35e96373373e8114a0c906a40edf2f0e066d591d667818dc2e580e2aeab84a"
+    },
+    "coremldata.bin": {
+      "bytes": 643,
+      "sha256": "9245ac99889c9d738cba6c89da9e851fd16488bf8effbc15a109d06b401c9383"
+    },
+    "analytics/coremldata.bin": {
+      "bytes": 243,
+      "sha256": "1646746d0029e78d26be065e62602d4f89e51013ec238b653adf7d7d21057f89"
+    }
+  },
+  "scope": "All learned tensors verified against official v3.2 then replaced by official v3.1 with identical layouts; unchanged float32 front end/native operations. Native parity required separately."
+}

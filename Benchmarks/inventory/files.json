@@ -13506,6 +13506,218 @@
       "category": "voice"
     },
     {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/app-build.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/app-policy.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/build-health.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/bundle-staging.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json.receipt.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-verdict.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/catalog-check.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/catalog-render.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/catalog-tests.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/cleanup.json",
+      "category": "dictation"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/comparison-original-red-receipt.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/comparison-original-red.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/compiler-identity-fix.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-source-pins.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/eou-native-receipt.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/eou-native.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/eou-native.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/eou-probe-build.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/export-deps.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-comparison.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json.receipt.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-grading-receipts.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-probe-build.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/native-score.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/policy-controls.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/preservation-after.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/preservation-before.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/preservation-keyspace-correction.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/preservation-verdict.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/scorer-controls.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/shared-cache-before-isolation-check.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/shared-compiler-cache-observation.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.0.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.0.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.1-quiet-sweep.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.1-quiet-sweep.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.1.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.1.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.2.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v3.2.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-export.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-parity.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep-receipt.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.json",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.log",
+      "category": "voice"
+    },
+    {
+      "path": "Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json",
+      "category": "voice"
+    },
+    {
       "path": "Tests/Reports/website-to-mac/app12/dictation-direct-launch-failed.log",
       "category": "dictation"
     },

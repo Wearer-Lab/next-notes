@@ -1,12 +1,26 @@
 # Evidence discovery
 
-4029 current evidence files discovered under Tests/Reports, bench, docs and roadmaps.
+4082 current evidence files discovered under Tests/Reports, bench, docs and roadmaps.
 
 Imported third-party reference trees and website assets are excluded. Files are catalogued without moving them or extracting private payloads. Legacy files remain unclassified until a reviewed run manifest records their scope and verdict.
 
 [Machine-readable inventory](inventory/files.json) · [Git/worktree audit](inventory/README.md)
 
 ## Reviewed run sources
+
+### Smart Turn v3.1 premature-turn repair
+
+Paired original7WAVx3 native production capture, Apple+Parakeet EOU, Silero, SmartTurn, tick/commit/reset; bundled corrected model and reply test sink. **partial**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json](../Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/native-comparison.json](../Tests/Reports/voice-turn-repair-2026-10-23/native-comparison.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/native-score.json](../Tests/Reports/voice-turn-repair-2026-10-23/native-score.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/native-grading-receipts.json](../Tests/Reports/voice-turn-repair-2026-10-23/native-grading-receipts.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json.receipt.json](../Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json.receipt.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json](../Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/app-build.json](../Tests/Reports/voice-turn-repair-2026-10-23/app-build.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/preservation-verdict.json](../Tests/Reports/voice-turn-repair-2026-10-23/preservation-verdict.json)
 
 ### Silero and Smart Turn production endpoint replay
 
@@ -30,6 +44,26 @@ Actual optimized production CoreML wrappers on synthesized16k mono PCM; model in
 - [Tests/Reports/voice-turn-2026-10-23/native-models-receipt.json](../Tests/Reports/voice-turn-2026-10-23/native-models-receipt.json)
 - [Tests/Reports/voice-turn-2026-10-23/model-source-pins.json](../Tests/Reports/voice-turn-2026-10-23/model-source-pins.json)
 - [Tests/Reports/voice-turn-2026-10-23/export-differential-summary.json](../Tests/Reports/voice-turn-2026-10-23/export-differential-summary.json)
+
+### Voice diagnostic compiler-cache isolation
+
+Seven actual native file replays through dedicated diagnostic bundle ID; same production code/model with external cache before/after and native join. **partial**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/compiler-identity-fix.json](../Tests/Reports/voice-turn-repair-2026-10-23/compiler-identity-fix.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json](../Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json.receipt.json](../Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json.receipt.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-verdict.json](../Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-verdict.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/shared-cache-before-isolation-check.json](../Tests/Reports/voice-turn-repair-2026-10-23/shared-cache-before-isolation-check.json)
+
+### Native ASR EOU pause diagnostic
+
+Actual pinned StreamingEouAsrManager160ms feed at debounce0/320; original exact WAVs, unpaced sample-position callback observations. **failed**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/eou-native.json](../Tests/Reports/voice-turn-repair-2026-10-23/eou-native.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/eou-native-receipt.json](../Tests/Reports/voice-turn-repair-2026-10-23/eou-native-receipt.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/eou-probe-build.json](../Tests/Reports/voice-turn-repair-2026-10-23/eou-probe-build.json)
 
 ### Qwen3-TTS0.6B4bit: serial speaker continuation
 
@@ -150,6 +184,44 @@ Actual production playback backing with native48k mono microphone observation un
 - [Tests/Reports/tts-2026-10-22/calibrated-command.json](../Tests/Reports/tts-2026-10-22/calibrated-command.json)
 - [Tests/Reports/tts-2026-10-22/calibrated-speaker/reference-progress-audit.json](../Tests/Reports/tts-2026-10-22/calibrated-speaker/reference-progress-audit.json)
 - [Tools/tts_compare.py](../Tools/tts_compare.py)
+
+### Smart Turn v3.2 original pause snapshots
+
+Official immutable ONNX classifier decisions at six protected-prefix and seven completed-turn sample snapshots; exact original seven WAVs and upstream preprocessing. **failed**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v3.2.json](../Tests/Reports/voice-turn-repair-2026-10-23/v3.2.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json](../Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json](../Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json)
+
+### Smart Turn v3.1 original pause snapshots
+
+Official immutable ONNX classifier decisions at six protected-prefix and seven completed-turn sample snapshots; exact original seven WAVs and upstream preprocessing. **partial**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v3.1.json](../Tests/Reports/voice-turn-repair-2026-10-23/v3.1.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json](../Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json](../Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json)
+
+### Smart Turn v3.1 native pause sweep
+
+Exact production CoreML wrapper and reweighted v3.1 graph versus official v3.1 ONNX on identical PCM/sample endpoints. **partial**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v31-native-export.json](../Tests/Reports/voice-turn-repair-2026-10-23/v31-native-export.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v31-native-parity.json](../Tests/Reports/voice-turn-repair-2026-10-23/v31-native-parity.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.json](../Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep-receipt.json](../Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep-receipt.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v3.1-quiet-sweep.json](../Tests/Reports/voice-turn-repair-2026-10-23/v3.1-quiet-sweep.json)
+
+### Smart Turn v3.0 original pause snapshots
+
+Official immutable ONNX classifier decisions at six protected-prefix and seven completed-turn sample snapshots; exact original seven WAVs and upstream preprocessing. **partial**
+
+- [Tests/Reports/voice-turn-repair-2026-10-23/README.md](../Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+- [Tests/Reports/voice-turn-repair-2026-10-23/v3.0.json](../Tests/Reports/voice-turn-repair-2026-10-23/v3.0.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json](../Tests/Reports/voice-turn-repair-2026-10-23/version-diagnostic-receipts.json)
+- [Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json](../Tests/Reports/voice-turn-repair-2026-10-23/diagnostic-artifact-pins.json)
 
 ### Qwen3-TTS0.6B4bit: quiet-room speaker-output attempt
 

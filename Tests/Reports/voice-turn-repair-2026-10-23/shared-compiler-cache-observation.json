@@ -1,0 +1,20 @@
+{
+  "cache": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes/com.apple.e5rt.e5bundlecache",
+  "run_started": 1792741840.851917,
+  "rows": [
+    {
+      "path": "26B5091g/AD07AAD10B910921BC75C2810511CDE922E76B582CB97131141C41F754B07B00/model.milhash",
+      "bytes": 64,
+      "mtime": 1792741841.2054608,
+      "birth": 1792741841.2054207
+    },
+    {
+      "path": "26B5091g/1BDE0702A957679DB7D6756BD385252E1B481AD4C49BE0A1D44BD7C00BFCB5F3/model.milhash",
+      "bytes": 64,
+      "mtime": 1792741841.2034338,
+      "birth": 1792741841.203377
+    }
+  ],
+  "owned_before_snapshot_missing": true,
+  "deleted": false
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "smart-turn-v3.0.onnx",
+    "bytes": 8757193,
+    "sha256": "07a133aba31e2d0b523f17f8c2e4e65efe6d8f685efd12ca4fe21ebf4e798991",
+    "revision": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93"
+  },
+  {
+    "file": "smart-turn-v3.1-gpu.onnx",
+    "bytes": 32411198,
+    "sha256": "a32f7445d5076029472b6c9f7a71005df576ea19d5f929021200f535b962af84",
+    "revision": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93"
+  },
+  {
+    "file": "smart-turn-v3.2-gpu.onnx",
+    "bytes": 32411198,
+    "sha256": "ab8dc64b88713f90b571c15b714bd1330e6c883cad8763dacf65c9376dc539be",
+    "revision": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93"
+  }
+]

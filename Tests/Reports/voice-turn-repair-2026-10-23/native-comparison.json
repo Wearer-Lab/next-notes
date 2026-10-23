@@ -1,0 +1,259 @@
+{
+  "schema": "nextnotes.turn-regression-comparison.v1",
+  "before": [
+    {
+      "case": "complete-question",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 3,
+      "endpoint_ms": [
+        362.0563750000001,
+        303.846,
+        333.59016699999984
+      ],
+      "median_ms": 333.59016699999984,
+      "p95_ms": 359.2097542000001,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-200",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        283.5092920000002,
+        374.7705420000002,
+        385.5960829999999
+      ],
+      "median_ms": 374.7705420000002,
+      "p95_ms": 384.5135288999999,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-400",
+      "trials": 3,
+      "premature_trials": 3,
+      "wrong_commit_count_trials": 3,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [],
+      "median_ms": null,
+      "p95_ms": null,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-600",
+      "trials": 3,
+      "premature_trials": 3,
+      "wrong_commit_count_trials": 3,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 3,
+      "endpoint_ms": [],
+      "median_ms": null,
+      "p95_ms": null,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-900",
+      "trials": 3,
+      "premature_trials": 3,
+      "wrong_commit_count_trials": 3,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [],
+      "median_ms": null,
+      "p95_ms": null,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-1200",
+      "trials": 3,
+      "premature_trials": 3,
+      "wrong_commit_count_trials": 3,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [],
+      "median_ms": null,
+      "p95_ms": null,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-1500",
+      "trials": 3,
+      "premature_trials": 3,
+      "wrong_commit_count_trials": 3,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 3,
+      "endpoint_ms": [],
+      "median_ms": null,
+      "p95_ms": null,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    }
+  ],
+  "after": [
+    {
+      "case": "complete-question",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 3,
+      "endpoint_ms": [
+        315.23187499999995,
+        303.9140419999999,
+        324.97287499999993
+      ],
+      "median_ms": 315.23187499999995,
+      "p95_ms": 323.9987749999999,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-200",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        374.59741699999995,
+        384.63412500000004,
+        364.61058300000013
+      ],
+      "median_ms": 374.59741699999995,
+      "p95_ms": 383.63045420000003,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-400",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        294.7303750000001,
+        298.5845419999996,
+        292.3977500000001
+      ],
+      "median_ms": 294.7303750000001,
+      "p95_ms": 298.19912529999965,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-600",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        282.45895800000017,
+        314.9600840000003,
+        284.2513749999998
+      ],
+      "median_ms": 284.2513749999998,
+      "p95_ms": 311.88921310000023,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-900",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        304.73429099999976,
+        317.8603750000002,
+        378.55416700000023
+      ],
+      "median_ms": 317.8603750000002,
+      "p95_ms": 372.4847878000002,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-1200",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        312.4397079999999,
+        326.02179199999955,
+        297.91058299999986
+      ],
+      "median_ms": 312.4397079999999,
+      "p95_ms": 324.6635835999996,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    },
+    {
+      "case": "pause-1500",
+      "trials": 3,
+      "premature_trials": 0,
+      "wrong_commit_count_trials": 0,
+      "incomplete_trials": 0,
+      "endpoint_sources": {
+        "smartTurn": 3
+      },
+      "tail_failures": 0,
+      "endpoint_ms": [
+        300.12295900000026,
+        314.7674159999997,
+        296.5760829999999
+      ],
+      "median_ms": 300.12295900000026,
+      "p95_ms": 313.30297029999974,
+      "endpoint_boundary": "Authored speech end to actual producer commit; excludes audible response. Tail failures remain separate; these are not usable-answer timings."
+    }
+  ],
+  "original_failure_reproduced": true,
+  "endpoint_sequencing_passed": true,
+  "semantic_consumer_all_trials": true,
+  "final_tails_passed": false,
+  "product_promotion": "not_evaluated",
+  "scope": "Paired exact native fixture regression. Independent full scorer, ASR wording, phase/provider/physical/audible/pressure gates remain required."
+}

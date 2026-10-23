@@ -1,0 +1,223 @@
+{
+  "clock" : "monotonic",
+  "evidence" : "native_replay",
+  "limitations" : [
+    "Synthesized fixture boundaries; no physical microphone, audible response, tools or LLM.",
+    "Real Apple\/Parakeet\/Silero\/Smart Turn production capture and endpoint consumer.",
+    "Every trial opens a fresh capture session; residency is not independently measured. Warm\/cold-process\/pressure\/routes are separate gates.",
+    "Commit timestamps come from the existing producer probe at actual commit selection; no held checkpoint.",
+    "A missing first_audible stage stays missing in the full roadmap scorer."
+  ],
+  "macOS" : "Version 27.2 (Build 26B5091g)",
+  "run_id" : "F1660711-1FAD-4BD8-9C6C-86AB0C597030",
+  "schema" : "nextnotes.turn-trace.v1",
+  "trials" : [
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "case_id" : "complete-question",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 2570.77,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+
+        ],
+        "speech_end_ms" : 2229.625
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 5.008625,
+      "phase" : "cold_capture",
+      "recognized" : "what time is it in totio riding now",
+      "status" : "measured",
+      "tail_retained" : false,
+      "trial_id" : "complete-question-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "case_id" : "pause-200",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 3901.611583,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            1985.75
+          ]
+        ],
+        "speech_end_ms" : 3598.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.533334,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-200-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "case_id" : "pause-400",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 4131.439125,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            2185.75
+          ]
+        ],
+        "speech_end_ms" : 3798.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.267375,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-400-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "case_id" : "pause-600",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 4285.309167,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            2385.75
+          ]
+        ],
+        "speech_end_ms" : 3998.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.876500000000001,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-600-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "case_id" : "pause-900",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 4587.486667,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            2685.75
+          ]
+        ],
+        "speech_end_ms" : 4298.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.742458,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-900-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "case_id" : "pause-1200",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 4922.239458,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            2985.75
+          ]
+        ],
+        "speech_end_ms" : 4598.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.527958,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-1200-0",
+      "tts" : "not-run-endpoint-only"
+    },
+    {
+      "asr" : "Apple+Parakeet-EOU-160ms",
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "case_id" : "pause-1500",
+      "condition" : "paced-file-production-capture",
+      "endpoint_source" : "smartTurn",
+      "events" : [
+        {
+          "at_ms" : 5230.260875,
+          "name" : "commit"
+        }
+      ],
+      "ground_truth" : {
+        "protected_intervals_ms" : [
+          [
+            1785.75,
+            3285.75
+          ]
+        ],
+        "speech_end_ms" : 4898.9375
+      },
+      "language" : "en",
+      "pacing_p95_error_ms" : 4.781333,
+      "phase" : "cold_capture",
+      "recognized" : "i want to book a table for four people tomorrow evening",
+      "status" : "measured",
+      "tail_retained" : true,
+      "trial_id" : "pause-1500-0",
+      "tts" : "not-run-endpoint-only"
+    }
+  ]
+}

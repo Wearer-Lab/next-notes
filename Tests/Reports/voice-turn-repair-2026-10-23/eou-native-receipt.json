@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnEOUProbe",
+    "/Users/sergekadjo/Library/Application Support/FluidAudio/Models/parakeet-eou-streaming/parakeet-eou-streaming/160ms",
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+    "Tests/Reports/voice-turn-repair-2026-10-23/eou-native.json"
+  ],
+  "started": 1792740143.661725,
+  "binary_sha256": "3611ec343019fc46b44337af8dece21983eac03392d2f8f9917b6cd16f7d3319",
+  "scope": "Same SDK native manager, explicit existing assets, canonical unpaced160sample input. No product commit or wall latency claim.",
+  "pid": 52681,
+  "exit": 0,
+  "joined": true,
+  "finished": 1792740162.4307,
+  "compiler_cache_removed": [
+    {
+      "path": "/Users/sergekadjo/Library/Caches/VoiceTurnEOUProbe/com.apple.e5rt.e5bundlecache/26B5091g/2DFE73AA9388B9A8965459790C52B91D6AA620A9A163E740BAAE9EB40C41EF2A/A546AEB0D5E997F8D4387195411C94CBA8D2EEF8B5791A170377F884FD258D19.bundle",
+      "logicalBytes": 212748964
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/VoiceTurnEOUProbe/com.apple.e5rt.e5bundlecache/26B5091g/FCB1D369C6CED7B7E1B5D15F9B34AC5A42C8DF7F3A036A76BF62CD71B0B31B48/8066D2088A06C72844C47C3DE3C066786055100C00043F5B43F729BD5514A93F.bundle",
+      "logicalBytes": 7900808
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/VoiceTurnEOUProbe/com.apple.e5rt.e5bundlecache/26B5091g/FFA96799E771E99148B059446FD6546413C71FFBE336E5FE4213D7953BCBFB7E/2BEB12CFB544439E0FD157FFDA0DD60E7D3EE1E19D5588AA58C42D197C640A12.bundle",
+      "logicalBytes": 2985512
+    }
+  ]
+}

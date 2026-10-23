@@ -1,0 +1,8 @@
+{
+  "original_verdict_passed": false,
+  "reason": "Post-run checker hashed paths relative to Meetings; admission checker hashed relative to application-support root including Meetings/. Corrected the key namespace, without changing any file or per-file metadata.",
+  "original_key_overlap": 0,
+  "metadata_multiset_identical": true,
+  "corrected_matching_recording_keys": 143,
+  "writer_or_restore_used": false
+}

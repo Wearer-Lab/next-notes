@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-thread diagnostic differential against the pinned upstream v3.2 graph.
+"""One-thread diagnostic differential against an explicitly pinned upstream graph.
 This is an independent export check, not a product ONNX/Python dependency.
 The graph and generated fixtures must already exist in the owned fixture root.
 """
@@ -24,13 +24,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--model', type=Path)
+    parser.add_argument('--sweep', action='store_true', help='Check every 32ms quiet boundary, including the final protected sample')
     args = parser.parse_args()
     root = args.root.resolve()
     assert (root / '.nextnotes-turn-fixture').is_file()
     import numpy as np
     import onnxruntime as ort
     from transformers import WhisperFeatureExtractor
-    model = root / 'reference-v3.2.onnx'
+    model = args.model or root / 'reference-v3.2.onnx'
     options = ort.SessionOptions()
     options.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL
     options.inter_op_num_threads = 1
@@ -47,6 +49,12 @@ def main():
         points = [('internal-pause', start + min(300, end - start - 10))
                   for start, end in fixture['protectedIntervalsMS']]
         points += [('completed-turn', fixture['speechEndMS'] + 300)]
+        if args.sweep:
+            points = []
+            for start, end in fixture['protectedIntervalsMS']:
+                points += [('internal-pause', t) for t in np.arange(start + 160, end, 32)]
+                points.append(('internal-pause', end - 1 / 16))
+            points += [('completed-turn', fixture['speechEndMS'] + t) for t in (200, 256, 300, 400, 496)]
         for kind, at_ms in points:
             tail = audio[:int(at_ms * 16)][-128000:]
             padded = np.pad(tail, (128000 - len(tail), 0))
@@ -55,6 +63,7 @@ def main():
             features = inputs.input_features.astype(np.float32)
             probability = float(session.run(None, {'input_features': features})[0][0].item())
             rows.append(dict(case=fixture['id'], boundary=kind, probability=probability,
+                             at_ms=float(at_ms), sample_end=int(at_ms * 16),
                              semantic_correct=probability >= 0.5 if kind == 'completed-turn' else probability < 0.5,
                              audio_sha256=fixture['audioSHA256']))
     result = dict(schema='nextnotes.turn-export-differential.v1', rows=rows,

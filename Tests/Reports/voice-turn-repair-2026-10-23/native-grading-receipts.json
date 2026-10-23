@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "python3",
+      "Tools/voice_turn_benchmark.py",
+      "compare",
+      "--before",
+      "Tests/Reports/voice-turn-2026-10-23/native-endpoints.json",
+      "--after",
+      "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json",
+      "--output",
+      "Tests/Reports/voice-turn-repair-2026-10-23/native-comparison.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "roadmap/in-progress/VOICE-TURN-DETECTION/benchmark/score.py",
+      "--trace",
+      "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json",
+      "--out",
+      "Tests/Reports/voice-turn-repair-2026-10-23/native-score.json"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": ""
+  }
+]

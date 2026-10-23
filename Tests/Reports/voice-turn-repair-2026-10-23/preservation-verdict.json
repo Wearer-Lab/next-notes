@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "counts": {
+    "files": 25,
+    "recordings": 143
+  },
+  "changed": {
+    "files": [],
+    "recordings": []
+  },
+  "installed_app_executable_unchanged": true,
+  "scope": "Exact bytes/mtime_ns/SHA256, latest owner preferences and all meeting files; no restore/migration/writer/installation.",
+  "keyspace_correction": "preservation-keyspace-correction.json",
+  "rechecked_after_cache_isolation": true,
+  "timestamp": 1792742481.116226
+}

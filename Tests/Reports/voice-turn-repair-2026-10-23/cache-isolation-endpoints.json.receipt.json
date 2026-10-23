@@ -1,0 +1,362 @@
+{
+  "command": [
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnRepairAppProbe.app/Contents/MacOS/VoiceTurnRepairAppProbe",
+    "--selftest-turn-benchmark",
+    "--turn-fixtures",
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/fixtures.json",
+    "--turn-model-root",
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+    "--turn-output",
+    "/Users/sergekadjo/Documents/Claude/Projects/next-notes/Tests/Reports/voice-turn-repair-2026-10-23/cache-isolation-endpoints.json",
+    "--turn-repetitions",
+    "1",
+    "--voice-feed-10ms"
+  ],
+  "binary_sha256": "0d577a4c46b50f2ffd61c5b8b98caae34a352b723cd6168b26a5041a4105a673",
+  "started": 1792742211.800029,
+  "scope": "Production endpoint replay; no audible response or tools",
+  "pid": 81512,
+  "exit": 0,
+  "joined": true,
+  "resources": {
+    "samples": 51,
+    "peak_footprint_bytes": 156894456,
+    "peak_resident_bytes": 523403264,
+    "swap_start_mb": 8263.06,
+    "swap_end_mb": 8263.06,
+    "swap_peak_mb": 8263.06,
+    "swap_growth_mb": 0.0,
+    "swap_over_abort_limit": true
+  },
+  "resource_samples": [
+    {
+      "at": 1792742212.8686569,
+      "footprint_bytes": 1327512,
+      "rss_bytes": 7618560,
+      "free_bytes": 7006138368
+    },
+    {
+      "at": 1792742213.883113,
+      "footprint_bytes": 43877096,
+      "rss_bytes": 77971456,
+      "free_bytes": 6988111872
+    },
+    {
+      "at": 1792742214.887425,
+      "footprint_bytes": 54871192,
+      "rss_bytes": 507379712,
+      "free_bytes": 6988075008
+    },
+    {
+      "at": 1792742215.8918889,
+      "footprint_bytes": 60458136,
+      "rss_bytes": 523403264,
+      "free_bytes": 6886350848
+    },
+    {
+      "at": 1792742216.901093,
+      "footprint_bytes": 66585752,
+      "rss_bytes": 365199360,
+      "free_bytes": 6760443904
+    },
+    {
+      "at": 1792742217.903007,
+      "footprint_bytes": 84624536,
+      "rss_bytes": 389742592,
+      "free_bytes": 6753918976
+    },
+    {
+      "at": 1792742218.9071739,
+      "footprint_bytes": 152208584,
+      "rss_bytes": 380911616,
+      "free_bytes": 6752849920
+    },
+    {
+      "at": 1792742219.917448,
+      "footprint_bytes": 149849288,
+      "rss_bytes": 381337600,
+      "free_bytes": 6752837632
+    },
+    {
+      "at": 1792742220.9228659,
+      "footprint_bytes": 154453216,
+      "rss_bytes": 392265728,
+      "free_bytes": 6752821248
+    },
+    {
+      "at": 1792742221.932657,
+      "footprint_bytes": 155190496,
+      "rss_bytes": 392740864,
+      "free_bytes": 6752845824
+    },
+    {
+      "at": 1792742222.9428349,
+      "footprint_bytes": 152732896,
+      "rss_bytes": 395788288,
+      "free_bytes": 6731243520
+    },
+    {
+      "at": 1792742223.9568691,
+      "footprint_bytes": 155485408,
+      "rss_bytes": 396132352,
+      "free_bytes": 6731341824
+    },
+    {
+      "at": 1792742224.967134,
+      "footprint_bytes": 155763936,
+      "rss_bytes": 396181504,
+      "free_bytes": 6731214848
+    },
+    {
+      "at": 1792742225.977349,
+      "footprint_bytes": 152536288,
+      "rss_bytes": 399785984,
+      "free_bytes": 6731214848
+    },
+    {
+      "at": 1792742226.9877279,
+      "footprint_bytes": 152896736,
+      "rss_bytes": 400195584,
+      "free_bytes": 6731182080
+    },
+    {
+      "at": 1792742227.9925828,
+      "footprint_bytes": 156091616,
+      "rss_bytes": 400293888,
+      "free_bytes": 6731182080
+    },
+    {
+      "at": 1792742229.007152,
+      "footprint_bytes": 153158880,
+      "rss_bytes": 400261120,
+      "free_bytes": 6730997760
+    },
+    {
+      "at": 1792742230.0155652,
+      "footprint_bytes": 153879776,
+      "rss_bytes": 396935168,
+      "free_bytes": 6730944512
+    },
+    {
+      "at": 1792742231.020763,
+      "footprint_bytes": 155829472,
+      "rss_bytes": 396918784,
+      "free_bytes": 6730940416
+    },
+    {
+      "at": 1792742232.03098,
+      "footprint_bytes": 156255456,
+      "rss_bytes": 400424960,
+      "free_bytes": 6730940416
+    },
+    {
+      "at": 1792742233.0412621,
+      "footprint_bytes": 155960544,
+      "rss_bytes": 400424960,
+      "free_bytes": 6730940416
+    },
+    {
+      "at": 1792742234.060111,
+      "footprint_bytes": 153175264,
+      "rss_bytes": 400621568,
+      "free_bytes": 6731063296
+    },
+    {
+      "at": 1792742235.067828,
+      "footprint_bytes": 153912544,
+      "rss_bytes": 400654336,
+      "free_bytes": 6731051008
+    },
+    {
+      "at": 1792742236.074267,
+      "footprint_bytes": 153273568,
+      "rss_bytes": 397180928,
+      "free_bytes": 6731022336
+    },
+    {
+      "at": 1792742237.086265,
+      "footprint_bytes": 153273568,
+      "rss_bytes": 397180928,
+      "free_bytes": 6731018240
+    },
+    {
+      "at": 1792742238.096606,
+      "footprint_bytes": 154223840,
+      "rss_bytes": 400736256,
+      "free_bytes": 6731014144
+    },
+    {
+      "at": 1792742239.113548,
+      "footprint_bytes": 153683168,
+      "rss_bytes": 400687104,
+      "free_bytes": 6730973184
+    },
+    {
+      "at": 1792742240.123782,
+      "footprint_bytes": 155698400,
+      "rss_bytes": 400736256,
+      "free_bytes": 6730952704
+    },
+    {
+      "at": 1792742241.134151,
+      "footprint_bytes": 152962272,
+      "rss_bytes": 400736256,
+      "free_bytes": 6730948608
+    },
+    {
+      "at": 1792742242.136962,
+      "footprint_bytes": 153568480,
+      "rss_bytes": 397590528,
+      "free_bytes": 6730924032
+    },
+    {
+      "at": 1792742243.147153,
+      "footprint_bytes": 156337376,
+      "rss_bytes": 397639680,
+      "free_bytes": 6730919936
+    },
+    {
+      "at": 1792742244.163792,
+      "footprint_bytes": 153355488,
+      "rss_bytes": 397639680,
+      "free_bytes": 6730899456
+    },
+    {
+      "at": 1792742245.164654,
+      "footprint_bytes": 153732344,
+      "rss_bytes": 401358848,
+      "free_bytes": 6730887168
+    },
+    {
+      "at": 1792742246.170788,
+      "footprint_bytes": 155714808,
+      "rss_bytes": 401375232,
+      "free_bytes": 6730854400
+    },
+    {
+      "at": 1792742247.17847,
+      "footprint_bytes": 156894456,
+      "rss_bytes": 401391616,
+      "free_bytes": 6730772480
+    },
+    {
+      "at": 1792742248.188683,
+      "footprint_bytes": 153699576,
+      "rss_bytes": 401391616,
+      "free_bytes": 6730747904
+    },
+    {
+      "at": 1792742249.204833,
+      "footprint_bytes": 153797880,
+      "rss_bytes": 397901824,
+      "free_bytes": 6730452992
+    },
+    {
+      "at": 1792742250.212069,
+      "footprint_bytes": 155796728,
+      "rss_bytes": 397934592,
+      "free_bytes": 6730399744
+    },
+    {
+      "at": 1792742251.220883,
+      "footprint_bytes": 154223864,
+      "rss_bytes": 401424384,
+      "free_bytes": 6730350592
+    },
+    {
+      "at": 1792742252.226033,
+      "footprint_bytes": 156730616,
+      "rss_bytes": 401440768,
+      "free_bytes": 6730317824
+    },
+    {
+      "at": 1792742253.232882,
+      "footprint_bytes": 156878072,
+      "rss_bytes": 401424384,
+      "free_bytes": 6730506240
+    },
+    {
+      "at": 1792742254.2524512,
+      "footprint_bytes": 154436856,
+      "rss_bytes": 401637376,
+      "free_bytes": 6730473472
+    },
+    {
+      "at": 1792742255.259414,
+      "footprint_bytes": 154174712,
+      "rss_bytes": 401620992,
+      "free_bytes": 6730473472
+    },
+    {
+      "at": 1792742256.26969,
+      "footprint_bytes": 153814264,
+      "rss_bytes": 398147584,
+      "free_bytes": 6730461184
+    },
+    {
+      "at": 1792742257.280073,
+      "footprint_bytes": 154043640,
+      "rss_bytes": 398180352,
+      "free_bytes": 6730440704
+    },
+    {
+      "at": 1792742258.290454,
+      "footprint_bytes": 153781496,
+      "rss_bytes": 398163968,
+      "free_bytes": 6730420224
+    },
+    {
+      "at": 1792742259.30749,
+      "footprint_bytes": 154191096,
+      "rss_bytes": 401670144,
+      "free_bytes": 6730387456
+    },
+    {
+      "at": 1792742260.312435,
+      "footprint_bytes": 153945336,
+      "rss_bytes": 401670144,
+      "free_bytes": 6730387456
+    },
+    {
+      "at": 1792742261.3152032,
+      "footprint_bytes": 156681464,
+      "rss_bytes": 401670144,
+      "free_bytes": 6730387456
+    },
+    {
+      "at": 1792742262.323831,
+      "footprint_bytes": 154240248,
+      "rss_bytes": 401735680,
+      "free_bytes": 6733643776
+    },
+    {
+      "at": 1792742263.3341088,
+      "footprint_bytes": 154223864,
+      "rss_bytes": 401719296,
+      "free_bytes": 6733631488
+    }
+  ],
+  "finished": 1792742263.876392,
+  "compiler_cache_removed": [
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/1438B5B5F42F696C7149B7C4D7C7F0B4754B507DC56FAA33272DBE534877E3AC/FBD677A2781EB3CF77E59C16CDEF4068A684589435D97989A2C5A66AA5FF09E9.bundle",
+      "logicalBytes": 986504
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/7F59AA8BE92F91817D1C832E433DC5CD974B35F6D706AF5A29D7147D14E7A179/D8155CCF994EC782C67760D05D807197051AB5E983D71B532EB686E77ED95645.bundle",
+      "logicalBytes": 212748988
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/A4E83E2591D18F62B288A2B9B0E21DAC5CC75BD375B8B15BD604E8813908BF1E/8EC404B75A50A867649E3C2793D0CE9E2A8D5335D85EE2B0E4A0F1C260419E76.bundle",
+      "logicalBytes": 774081
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/AE1737B0251780D37BDEC79F59C9930E11129E27B75760DEF324F4ADF9277493/23435607D11536554BDC69CE02D441AEF59865B06BC66F0E2A74D02ABED2CC95.bundle",
+      "logicalBytes": 7900832
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/ai.pivotstudio.nextnotes.voiceturn.repair/com.apple.e5rt.e5bundlecache/26B5091g/F0282C97446B76E6E4A19366C3BFB3F24BAC9B14E98D533A7E740EC5BF983B44/67131F7702655BFECD3E25C0AF04413121E11990B6968D1A185A8D6A372421EA.bundle",
+      "logicalBytes": 2985536
+    }
+  ]
+}

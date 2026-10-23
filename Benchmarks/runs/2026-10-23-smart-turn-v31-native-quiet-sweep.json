@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-23-smart-turn-v31-native-quiet-sweep",
+  "title": "Smart Turn v3.1 native pause sweep",
+  "date": "2026-10-23",
+  "category": "voice",
+  "status": "partial",
+  "scope": "Exact production CoreML wrapper and reweighted v3.1 graph versus official v3.1 ONNX on identical PCM/sample endpoints.",
+  "summary": "129 protected snapshots hold; all164 native/reference decisions agree. Three of35 final snapshots remain incomplete. Actual application endpoint replay is separate.",
+  "environment": {
+    "hardware": "16GB Apple M3 MacBook Air, Mac15,12",
+    "os": "macOS27.2 (26B5091g)",
+    "workload": "Serial owned diagnostic processes, original synthetic mono16kHz PCM; no TTS/LLM/microphone/tools.",
+    "power_thermal": "Not sampled; not concurrent voice/reference-machine qualification."
+  },
+  "provenance": {
+    "model_revision": "v3.1-f766f81-coreml-r1",
+    "exporter": "Tools/export_smart_turn_v31.py verifies all8,000,386 learned elements; exact pins in resource manifest and export receipt.",
+    "native_binary_sha256": "b1ad0676f43d8f0036da61a2a4231fab625b373ede280e342d81508b6625ecef",
+    "runner": "VoiceTurnNativeProbe --turn-sweep --turn-smart-only --turn-repetitions1"
+  },
+  "metrics": [
+    {
+      "name": "protected snapshots prematurely complete",
+      "value": 0,
+      "unit": "snapshots",
+      "boundary": "32ms sweep from prefix+160ms through last protected sample of original200\u20131500ms pauses.",
+      "samples": 129,
+      "aggregation": "count"
+    },
+    {
+      "name": "native/reference decision disagreement",
+      "value": 0,
+      "unit": "snapshots",
+      "boundary": "Same sample positions and0.5 decision threshold; max probability difference0.032763.",
+      "samples": 164,
+      "aggregation": "count"
+    },
+    {
+      "name": "completed snapshots incorrectly incomplete",
+      "value": 3,
+      "unit": "snapshots",
+      "boundary": "Completed final+200/256/300/400/496ms snapshots, five per seven original WAVs.",
+      "samples": 35,
+      "aggregation": "count"
+    }
+  ],
+  "limitations": [
+    "Decision parity is not bitwise or universal probability parity.",
+    "129 correlated prefix snapshots are not129 independent natural turns.",
+    "Three completed snapshots fail; no latency/word-quality/default promotion.",
+    "Same synthesis limits and missing physical/provider/reference workload acceptance."
+  ],
+  "sources": [
+    "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-export.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-parity.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep-receipt.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/v3.1-quiet-sweep.json"
+  ],
+  "publication": {
+    "approved": false,
+    "reviewed_by": null,
+    "reviewed_on": null
+  }
+}

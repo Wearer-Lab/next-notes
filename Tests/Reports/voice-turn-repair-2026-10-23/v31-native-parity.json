@@ -1,0 +1,26 @@
+{
+  "snapshots": 164,
+  "protected_snapshots": 129,
+  "protected_errors": 0,
+  "completed_snapshots": 35,
+  "completed_incomplete_decisions": [
+    {
+      "case": "pause-400",
+      "sample_end": 68719,
+      "probability": 0.4013671875
+    },
+    {
+      "case": "pause-600",
+      "sample_end": 71919,
+      "probability": 0.272705078125
+    },
+    {
+      "case": "pause-900",
+      "sample_end": 72879,
+      "probability": 0.409912109375
+    }
+  ],
+  "decision_disagreements": 0,
+  "max_probability_delta": 0.032762765884399414,
+  "scope": "Same original seven WAVs and exact sample endpoints, upstream NumPy normalized Whisper features vs native raw-PCM fp32 frontend/fp16 classifier. 164 decision checks; execution durations are diagnostic only, not wall endpoint/audible latency."
+}

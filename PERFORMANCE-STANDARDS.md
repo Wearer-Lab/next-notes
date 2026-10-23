@@ -647,3 +647,22 @@ native runs, including the separately owner-selected Phonon choice. Read
 [implementation evidence](Tests/Reports/voice-turn-2026-10-23/README.md) for exact
 source/binary/model/fixture pins, original failures, resource refusal/recovery,
 ASR/TTS alignment and remaining physical/provider/pressure/soak gates.
+
+Voice-turn premature-ending repair,23October: [paired producer/consumer evidence](Tests/Reports/voice-turn-repair-2026-10-23/README.md)
+changes official classifier parameters from v3.2 to v3.1 in the same pinned native
+graph. Reproducible export verifies all8,000,386 learned elements; no threshold,
+quiet delay, ASR debounce, text gate or extra inference pass changes.129 protected
+snapshots hold; all164 native/reference decisions agree, retaining3/35 completed
+snapshot misses. Optimized full build922.32s/policy pass. Actual same-WAV21-trial
+capture/Apple+Parakeet/Silero/SmartTurn/commit replay changes15 premature duplicate
+splits to0, exactly one semantic commit each, and paused tails12/18→18/18. Endpoint
+per-case medians284–375ms (n3) exclude audible output; three question-tail failures
+remain. Full scorer exits1 for words,25 missing cases, minimum30 and missing audible
+stages. Sampled peak footprint133.9MB/RSS409.2MB and unchanged8263.06MiB swap are
+observations under current pressure, not resource/reference qualification. Still
+opt-in, no install/default promotion. Harness now keys CoreML cache on a dedicated
+diagnostic bundle ID; seven additional functional trials prove owned cleanup of
+five new compiler bundles after join and shared-owner-cache preservation.25 owner
+stores/settings and143 meeting files plus installed executable remain unchanged.
+Latest owner-selected Phonon remains selected. Full provider/physical/duplex/held-out
+and soak acceptance remains open; original v3.2 failures are retained.

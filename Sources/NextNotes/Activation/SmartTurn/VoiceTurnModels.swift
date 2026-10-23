@@ -13,7 +13,9 @@ enum VoiceTurnAssets {
     }
     enum Kind: String, Sendable { case smartTurn, silero }
     struct File: Sendable { let path: String; let bytes: Int64; let sha: String }
-    static let smartRevision = "75f069717f500947195fa1945c46ddb472559cff"
+    // Official v3.1 parameters, exact native graph reweight (Tools/export_smart_turn_v31.py).
+    // v3.2 prematurely completes the preserved unfinished-prefix regressions.
+    static let smartRevision = "v3.1-f766f81-coreml-r1"
     static let sileroRevision = "b419383c55c110e2c9271fa6ee0ea83d03c70d96"
     static var root: URL {
         if SelfTest.isRunning, let supplied = SelfTest.value(after: "--turn-model-root") {
@@ -29,10 +31,10 @@ enum VoiceTurnAssets {
     static func files(_ kind: Kind) -> [File] {
         switch kind {
         case .smartTurn: return [
-            File(path: "weights/weight.bin", bytes: 16_714_240, sha: "b6295316741a0149e1fcab7cdf030e1b9bfb0eef778207accee91a2a9703a39c"),
+            File(path: "weights/weight.bin", bytes: 16_714_240, sha: "ec35e96373373e8114a0c906a40edf2f0e066d591d667818dc2e580e2aeab84a"),
             File(path: "coremldata.bin", bytes: 643, sha: "9245ac99889c9d738cba6c89da9e851fd16488bf8effbc15a109d06b401c9383"),
             File(path: "analytics/coremldata.bin", bytes: 243, sha: "1646746d0029e78d26be065e62602d4f89e51013ec238b653adf7d7d21057f89"),
-            File(path: "model.mil", bytes: 69_968, sha: "41a6d9ac0f7d01d738e56ecdf4435e55f139591541b7cf1a4dba6b9ce2f1c9ef")]
+            File(path: "model.mil", bytes: 69_987, sha: "71d7ce28a6d8d86c1ea5287bd15073ecbd491ec9c1e5c0c8c8d2ecb8b267df3b")]
         case .silero: return [
             File(path: "weights/weight.bin", bytes: 882_304, sha: "853cf34740d3f5061f977ebe2976f7c921b064261c9c4753b3a1196f2dba42b4"),
             File(path: "coremldata.bin", bytes: 593, sha: "f460dcdf796b19c04bc38ab6e69601831f634e5e74d499487f0c8fe17ca12f0f"),
@@ -57,14 +59,21 @@ enum VoiceTurnAssets {
             try verify(kind, at: destination)
             return destination
         }
+        if kind == .smartTurn {
+            // Reproducible v3.1 native export ships with the opt-in candidate.
+            // No private cache URL, runtime Python conversion, owner migration or
+            // invalid v3.2 download silently substituting different parameters.
+            guard let resources = Bundle.main.resourceURL else { throw CocoaError(.fileNoSuchFile) }
+            let bundled = resources.appendingPathComponent("SmartTurnV31/smart_turn.mlmodelc")
+            try verify(kind, at: bundled)
+            return bundled
+        }
         guard !cachedOnly else { throw CocoaError(.fileNoSuchFile) }
         let parent = destination.deletingLastPathComponent()
         try FileManager.default.createDirectory(at: parent, withIntermediateDirectories: true)
         let stage = parent.appendingPathComponent(".stage-" + UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: stage) }
-        let remote = kind == .smartTurn
-            ? "https://huggingface.co/aufklarer/Smart-Turn-v3.2-CoreML/resolve/\(smartRevision)/smart_turn.mlmodelc/"
-            : "https://huggingface.co/FluidInference/silero-vad-coreml/resolve/\(sileroRevision)/silero-vad-unified-v6.0.0.mlmodelc/"
+        let remote = "https://huggingface.co/FluidInference/silero-vad-coreml/resolve/\(sileroRevision)/silero-vad-unified-v6.0.0.mlmodelc/"
         // Reserve the complete remaining artifact, not just the next tiny metadata file.
         let total = files(kind).reduce(Int64(0)) { $0 + $1.bytes }
         guard ModelDownloader.availableDiskBytes(at: parent) - total >= ModelDownloader.minimumFreeBytesAfterDownload else {

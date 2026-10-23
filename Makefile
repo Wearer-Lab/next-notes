@@ -175,6 +175,7 @@ app: build
 	@# Open Peeps companion figures (Pablo Stanley, CC0). See Resources/OpenPeeps/ATTRIBUTION.md.
 	@cp -R Resources/OpenPeeps "$(CONTENTS)/Resources/"
 	@cp -R Resources/ThemeFonts "$(CONTENTS)/Resources/"
+	@cp -R Resources/SmartTurnV31 "$(CONTENTS)/Resources/"
 	@# The knowledge graph's ontology. Ontology.swift carries a compiled-in copy for bare
 	@# binaries, and --selftest-extract fails if the two drift.
 	@cp Resources/knowledge-ontology.yaml "$(CONTENTS)/Resources/"

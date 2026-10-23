@@ -47,6 +47,13 @@ enum VoiceTurnNativeProbe {
             // into a product claim. Full app endpoint traces use the other collector.
             var points: [(String, Double)] = fixture.protectedIntervalsMS.map { ("internal-pause", $0[0] + min(300, $0[1] - $0[0] - 10)) }
             points.append(("completed-turn", fixture.speechEndMS + 300))
+            if CommandLine.arguments.contains("--turn-sweep") {
+                points = fixture.protectedIntervalsMS.flatMap { interval in
+                    stride(from: interval[0] + 160, to: interval[1], by: 32).map { ("internal-pause", $0) }
+                        + [("internal-pause", interval[1] - 1.0 / 16)]
+                }
+                points += [200.0, 256, 300, 400, 496].map { ("completed-turn", fixture.speechEndMS + $0) }
+            }
             for (kind, atMS) in points {
                 let end = min(pcm.count, max(1, Int(atMS * 16)))
                 let audio = Array(pcm.prefix(end).suffix(128_000))
@@ -60,6 +67,7 @@ enum VoiceTurnNativeProbe {
                         "semantic_correct": kind == "completed-turn" ? probability >= 0.5 : probability < 0.5])
                 }
             }
+            if CommandLine.arguments.contains("--turn-smart-only") { continue }
             let anchor = DispatchTime.now().uptimeNanoseconds
             var probabilities: [[String: Any]] = []
             var high = 0

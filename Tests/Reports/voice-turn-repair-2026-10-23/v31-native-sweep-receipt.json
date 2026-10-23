@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnNativeProbe",
+    "--turn-fixtures",
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/fixtures.json",
+    "--turn-model-root",
+    "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+    "--turn-output",
+    "/Users/sergekadjo/Documents/Claude/Projects/next-notes/Tests/Reports/voice-turn-repair-2026-10-23/v31-native-sweep.json",
+    "--turn-repetitions",
+    "1",
+    "--turn-sweep",
+    "--turn-smart-only"
+  ],
+  "source_sha256": {
+    "Tools/VoiceTurnNativeProbe.swift": "2169c73f966ca66a07878cb916ad8186e7fd59d90502c907a617b244832cfcb5",
+    "Sources/NextNotes/Activation/SmartTurn/VoiceTurnModels.swift": "bc88a4d54b647d84b62e01a8cb8e6187bcd98a2a972b0324d4c92b9e2bb5708f"
+  },
+  "started": 1792740743.835774,
+  "binary_sha256": "b1ad0676f43d8f0036da61a2a4231fab625b373ede280e342d81508b6625ecef",
+  "free_before": 7022845952,
+  "pid": 60024,
+  "exit": 0,
+  "joined": true,
+  "finished": 1792740745.951879,
+  "compiler_cache_removed": [
+    {
+      "path": "/Users/sergekadjo/Library/Caches/VoiceTurnNativeProbe/com.apple.e5rt.e5bundlecache/26B5091g/21533A93E2198620E00E738297F6693F802D4797A3CCF5F28B397C1BF4E9259C/DCAE9836A7A3B8CBEE2C8FA24F4872E90153E1F6079F8C7BD0869EB8D9FA241B.bundle",
+      "logicalBytes": 774057
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/VoiceTurnNativeProbe/com.apple.e5rt.e5bundlecache/26B5091g/5E87ACFAF2D66CAE6E31F6469DABBCF0142BCA29C5EDA429E48F71308536B2A4/24202B8E912EE19F299461F60E3CD8EA01316DF78C7503C6197ED975E45D9C0F.bundle",
+      "logicalBytes": 986480
+    }
+  ]
+}

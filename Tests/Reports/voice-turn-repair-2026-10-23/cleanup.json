@@ -1,0 +1,44 @@
+{
+  "timestamp": 1792742481.069389,
+  "retired": [
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/export-deps",
+      "logical_bytes": 41368278
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnEOUProbe",
+      "logical_bytes": 19392688
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnNativeProbe",
+      "logical_bytes": 468088
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.0.onnx",
+      "logical_bytes": 8757193
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.1-gpu.onnx",
+      "logical_bytes": 32411198
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.2-gpu.onnx",
+      "logical_bytes": 32411198
+    },
+    {
+      "path": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/exported-v3.1-f766f81-coreml-r1",
+      "logical_bytes": 16785113
+    }
+  ],
+  "total_logical_bytes": 151593756,
+  "free_before": 6996226048,
+  "free_after": 7183962112,
+  "allocated_reclamation_not_claimed": true,
+  "build_log_sha256": "cf79163d643cdde1f0042eaf3e3eb84bfdeccd2d3024f6e5d9e2b782e6a69bf3",
+  "kept": [
+    "Current dedicated signed repair app, exact original WAV copies and pinned Silero fixture for reproduction.",
+    "Original v3.2 diagnostic app/fixtures retained as useful failed baseline.",
+    "Shared build/runtime/model caches and all owner data remain.",
+    "Small unknown prior shared compiler metadata retained; no shared-cache sweep."
+  ]
+}

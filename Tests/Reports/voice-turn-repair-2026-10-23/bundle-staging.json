@@ -1,0 +1,7 @@
+{
+  "staging_only": true,
+  "old_diagnostic_bundle": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-20261023/VoiceTurnAppProbe.app",
+  "new_diagnostic_bundle": "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/VoiceTurnRepairAppProbe.app",
+  "timestamp": 1792741513.4205499,
+  "installed_executable_sha256": "bce5ef99b315110ef535122ded59329eb6bec1d7a53d6e573ac9a07f4af95620"
+}

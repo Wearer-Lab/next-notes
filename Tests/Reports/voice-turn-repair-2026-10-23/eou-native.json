@@ -1,0 +1,1085 @@
+{
+  "rows" : [
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "case" : "complete-question",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 10240,
+          "text" : "what"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "what time"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "what time is"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 15360,
+          "text" : "what time is it"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 17920,
+          "text" : "what time is it in"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 20480,
+          "text" : "what time is it in tot"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "what time is it in totio"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 32000,
+          "text" : "what time is it in totio rid"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 33280,
+          "text" : "what time is it in totio riding now"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 39680,
+          "text" : "what time is it in totio riding now"
+        }
+      ],
+      "protected_intervals_ms" : [
+
+      ],
+      "speech_end_ms" : 2229.625
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "case" : "pause-200",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 39680,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 42240,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 44800,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 49920,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 56320,
+          "text" : "i want to book a table for four people tomorrow evening"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 64000,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          1985.75
+        ]
+      ],
+      "speech_end_ms" : 3598.9375
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "case" : "pause-400",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 42240,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 46080,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 47360,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 51200,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people tomorrow evening"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 72960,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2185.75
+        ]
+      ],
+      "speech_end_ms" : 3798.9375
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "case" : "pause-600",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 46080,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 47360,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 48640,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 51200,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 53760,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 61440,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 62720,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2385.75
+        ]
+      ],
+      "speech_end_ms" : 3998.9375
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "case" : "pause-900",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 52480,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 53760,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 66560,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 67840,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2685.75
+        ]
+      ],
+      "speech_end_ms" : 4298.9375
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "case" : "pause-1200",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 60160,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 64000,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 71680,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2985.75
+        ]
+      ],
+      "speech_end_ms" : 4598.9375
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "case" : "pause-1500",
+      "debounce_ms" : 0,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 57600,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 62720,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 65280,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 69120,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 75520,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 76800,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          3285.75
+        ]
+      ],
+      "speech_end_ms" : 4898.9375
+    },
+    {
+      "audio_sha256" : "32515a9a660f9f9cc8604202bf306c3395d9cf108f754d10ac8ca2bb5696b62a",
+      "case" : "complete-question",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 10240,
+          "text" : "what"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "what time"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "what time is"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 15360,
+          "text" : "what time is it"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 17920,
+          "text" : "what time is it in"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 20480,
+          "text" : "what time is it in tot"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "what time is it in totio"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 32000,
+          "text" : "what time is it in totio rid"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 33280,
+          "text" : "what time is it in totio riding now"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 44800,
+          "text" : "what time is it in totio riding now"
+        }
+      ],
+      "protected_intervals_ms" : [
+
+      ],
+      "speech_end_ms" : 2229.625
+    },
+    {
+      "audio_sha256" : "d298d834c2158354f9b0a2f9b02f9dfae2daaffe17728b5d9635f6b6dabd9601",
+      "case" : "pause-200",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 38400,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 39680,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 42240,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 44800,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 49920,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 56320,
+          "text" : "i want to book a table for four people tomorrow evening"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 69120,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          1985.75
+        ]
+      ],
+      "speech_end_ms" : 3598.9375
+    },
+    {
+      "audio_sha256" : "ee392b02d7d9dcedb73ca48c4cb8b147fecf10529a990c428ab7d05684466c1e",
+      "case" : "pause-400",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 42240,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 46080,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 47360,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 51200,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people tomorrow evening"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 78080,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2185.75
+        ]
+      ],
+      "speech_end_ms" : 3798.9375
+    },
+    {
+      "audio_sha256" : "a169aa838fe3e1ee1551faf8fd0a45b8e27e012cb545d9ef62e90b67fac3beed",
+      "case" : "pause-600",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 46080,
+          "text" : "i want to book a table for f"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 47360,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 48640,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 51200,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 53760,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 61440,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 62720,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2385.75
+        ]
+      ],
+      "speech_end_ms" : 3998.9375
+    },
+    {
+      "audio_sha256" : "91529c2c2498cecea12ee4c6afd081c9ec4aec228d9eb9cc2808c716a0488439",
+      "case" : "pause-900",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 52480,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 53760,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 66560,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 67840,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2685.75
+        ]
+      ],
+      "speech_end_ms" : 4298.9375
+    },
+    {
+      "audio_sha256" : "82d955c5562d5ec92f5658d9aa4e6c6cb92da0c5cc0b80d24be634f5a4b7c9b5",
+      "case" : "pause-1200",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 55040,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 58880,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 60160,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 64000,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 71680,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          2985.75
+        ]
+      ],
+      "speech_end_ms" : 4598.9375
+    },
+    {
+      "audio_sha256" : "825dc80a0f5c9a1c76eb187e9b70b64fbbcaafcc33a3dcd0ad9378a845b66753",
+      "case" : "pause-1500",
+      "debounce_ms" : 320,
+      "events" : [
+        {
+          "kind" : "partial",
+          "sample_end" : 7680,
+          "text" : "i"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 11520,
+          "text" : "i want to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 14080,
+          "text" : "i want to book"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 16640,
+          "text" : "i want to book a"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 21760,
+          "text" : "i want to book a table"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 25600,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "eou",
+          "sample_end" : 43520,
+          "text" : "i want to book a table for"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 57600,
+          "text" : "i want to book a table for four"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 62720,
+          "text" : "i want to book a table for four people"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 65280,
+          "text" : "i want to book a table for four people to"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 69120,
+          "text" : "i want to book a table for four people tomorrow"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 75520,
+          "text" : "i want to book a table for four people tomorrow even"
+        },
+        {
+          "kind" : "partial",
+          "sample_end" : 76800,
+          "text" : "i want to book a table for four people tomorrow evening"
+        }
+      ],
+      "protected_intervals_ms" : [
+        [
+          1785.75,
+          3285.75
+        ]
+      ],
+      "speech_end_ms" : 4898.9375
+    }
+  ],
+  "scope" : "Native streaming EOU evidence on original PCM, unpaced160-sample ingestion; sample positions only, no app commit, playback or latency claim."
+}

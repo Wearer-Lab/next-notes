@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-23-voice-turn-v31-endpoint-repair",
+  "title": "Smart Turn v3.1 premature-turn repair",
+  "date": "2026-10-23",
+  "category": "voice",
+  "status": "partial",
+  "scope": "Paired original7WAVx3 native production capture, Apple+Parakeet EOU, Silero, SmartTurn, tick/commit/reset; bundled corrected model and reply test sink.",
+  "summary": "Premature duplicate trials15/21\u21920/21; exactly one semantic commit each. Paused-request tails12/18\u219218/18; three complete-question tail errors remain. Opt-in/uninstalled.",
+  "environment": {
+    "hardware": "16GB Apple M3 MacBook Air, Mac15,12",
+    "os": "macOS27.2 (26B5091g)",
+    "workload": "Paced10ms file input in fresh captures; exclusive native window after full optimized build. No TTS/LLM/tools/physical mic.",
+    "power_thermal": "Not sampled. System swap8263.06MiB unchanged, over8GiB sampler reference limit; not reference resource/concurrent voice qualification."
+  },
+  "provenance": {
+    "source_pins": "Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json",
+    "binary_sha256": "0f480e85073e1a21f5acf2c7d3fb00561c26ff912b8238404dbf24443a2275b1",
+    "model_revision": "v3.1-f766f81-coreml-r1; Silero b419383c55c110e2c9271fa6ee0ea83d03c70d96",
+    "runner": "Tools/voice_turn_benchmark.py collect --repetitions3; compare exact original/fixed PCM hashes and counts; independent full roadmap score.",
+    "fixture": "Exact original seven WAV hashes in native traces; no re-synthesis or easier replacement.",
+    "signature": "Next Notes Local Signing; native21-trial identity/receipt retained. Dedicated diagnostic identity cleanup follow-up separate."
+  },
+  "metrics": [
+    {
+      "name": "premature turn trials",
+      "value": 0,
+      "unit": "trials",
+      "boundary": "Any actual commit before authored final speech end, including protected internal pauses; original15/21.",
+      "samples": 21,
+      "aggregation": "count"
+    },
+    {
+      "name": "wrong commit count trials",
+      "value": 0,
+      "unit": "trials",
+      "boundary": "Actual production producer commit count differs from exactly one per original fixture.",
+      "samples": 21,
+      "aggregation": "count"
+    },
+    {
+      "name": "paused-request final-tail failures",
+      "value": 0,
+      "unit": "trials",
+      "boundary": "Actual final committed words fail exact original expected tail; original6/18 failures.",
+      "samples": 18,
+      "aggregation": "count"
+    },
+    {
+      "name": "complete-question final-tail failures",
+      "value": 3,
+      "unit": "trials",
+      "boundary": "Actual final committed words fail unchanged question expected-tail check.",
+      "samples": 3,
+      "aggregation": "count"
+    },
+    {
+      "name": "complete-question endpoint",
+      "value": 315.23187499999995,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-200 endpoint",
+      "value": 374.59741699999995,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-400 endpoint",
+      "value": 294.7303750000001,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-600 endpoint",
+      "value": 284.2513749999998,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-900 endpoint",
+      "value": 317.8603750000002,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-1200 endpoint",
+      "value": 312.4397079999999,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    },
+    {
+      "name": "pause-1500 endpoint",
+      "value": 300.12295900000026,
+      "unit": "ms",
+      "boundary": "Authored speech end to actual commit.emitted; excludes audible output, includes all3 trials. Question wording fails separately.",
+      "samples": 3,
+      "aggregation": "median"
+    }
+  ],
+  "limitations": [
+    "Three repeats per seven synthesized English inputs do not meet30-per-case/phase or held-out qualification.",
+    "Full scorer exits1:25 required cases missing, no audible stages, insufficient samples and inherited question-tail wording errors.",
+    "No physical microphone/AEC/duck/interruption, provider matrix, audible response, M2, contention or soak qualification.",
+    "System pressure is explicit; no default or installed-app promotion.",
+    "Native full21-trial signature precedes diagnostic-only bundle-ID cache ownership repair; seven-trial follow-up is registered separately."
+  ],
+  "sources": [
+    "Tests/Reports/voice-turn-repair-2026-10-23/README.md",
+    "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/native-comparison.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/native-score.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/native-grading-receipts.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/native-endpoints.json.receipt.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/app-source-pins.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/app-build.json",
+    "Tests/Reports/voice-turn-repair-2026-10-23/preservation-verdict.json"
+  ],
+  "publication": {
+    "approved": false,
+    "reviewed_by": null,
+    "reviewed_on": null
+  }
+}

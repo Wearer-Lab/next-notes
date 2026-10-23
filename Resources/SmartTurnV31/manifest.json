@@ -1,0 +1,24 @@
+{
+  "revision": "v3.1-f766f81-coreml-r1",
+  "files": {
+    "model.mil": {
+      "bytes": 69987,
+      "sha256": "71d7ce28a6d8d86c1ea5287bd15073ecbd491ec9c1e5c0c8c8d2ecb8b267df3b"
+    },
+    "weights/weight.bin": {
+      "bytes": 16714240,
+      "sha256": "ec35e96373373e8114a0c906a40edf2f0e066d591d667818dc2e580e2aeab84a"
+    },
+    "coremldata.bin": {
+      "bytes": 643,
+      "sha256": "9245ac99889c9d738cba6c89da9e851fd16488bf8effbc15a109d06b401c9383"
+    },
+    "analytics/coremldata.bin": {
+      "bytes": 243,
+      "sha256": "1646746d0029e78d26be065e62602d4f89e51013ec238b653adf7d7d21057f89"
+    }
+  },
+  "official_onnx_sha256": "a32f7445d5076029472b6c9f7a71005df576ea19d5f929021200f535b962af84",
+  "template_revision": "75f069717f500947195fa1945c46ddb472559cff",
+  "exporter": "Tools/export_smart_turn_v31.py"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "version": "v3.0",
+    "command": [
+      "/opt/anaconda3/bin/python3",
+      "Tools/voice_turn_onnx_reference.py",
+      "--root",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+      "--model",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.0.onnx",
+      "--output",
+      "Tests/Reports/voice-turn-repair-2026-10-23/v3.0.json"
+    ],
+    "start": 1792740206.9059289,
+    "free_before": 8212860928,
+    "pid": 53425,
+    "exit": 0,
+    "joined": true,
+    "peak_rss_bytes": 325074944,
+    "finished": 1792740212.31686
+  },
+  {
+    "version": "v3.1",
+    "command": [
+      "/opt/anaconda3/bin/python3",
+      "Tools/voice_turn_onnx_reference.py",
+      "--root",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+      "--model",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.1-gpu.onnx",
+      "--output",
+      "Tests/Reports/voice-turn-repair-2026-10-23/v3.1.json"
+    ],
+    "start": 1792740212.317918,
+    "free_before": 8212942848,
+    "pid": 53453,
+    "exit": 0,
+    "joined": true,
+    "peak_rss_bytes": 387301376,
+    "finished": 1792740215.436063
+  },
+  {
+    "version": "v3.2",
+    "command": [
+      "/opt/anaconda3/bin/python3",
+      "Tools/voice_turn_onnx_reference.py",
+      "--root",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023",
+      "--model",
+      "/Users/sergekadjo/Library/Caches/NextNotesBuild/voice-turn-repair-20261023/smart-turn-v3.2-gpu.onnx",
+      "--output",
+      "Tests/Reports/voice-turn-repair-2026-10-23/v3.2.json"
+    ],
+    "start": 1792740215.436463,
+    "free_before": 8212602880,
+    "pid": 53478,
+    "exit": 0,
+    "joined": true,
+    "peak_rss_bytes": 399278080,
+    "finished": 1792740218.542148
+  }
+]

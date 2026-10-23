@@ -206,7 +206,7 @@ final class SmartTurnEndpoint: @unchecked Sendable {
         if coverageFallback { decision = .fallback }
         return Evaluation(decision: decision, token: current, quiet: quiet,
             probability: valid?.probability,
-            reason: coverageFallback ? "recognizer-coverage-unavailable" : (decision == .complete ? "smart-turn-v3.2" :
+            reason: coverageFallback ? "recognizer-coverage-unavailable" : (decision == .complete ? "smart-turn-v3.1" :
                 (valid != nil ? "incomplete-maximum-quiet" : (failure ?? "semantic-result-unavailable"))),
             endSample: endSample,
             decoderStamp: localText ? (decoderStamp ?? (coverageFallback ? publishedStamp : nil)) : nil)

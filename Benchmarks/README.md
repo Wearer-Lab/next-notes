@@ -8,8 +8,11 @@ Status describes the stated scope only. A measured component is not production a
 
 | Date | Area | Benchmark | Status | Result and limits |
 |---|---|---|---|---|
+| 2026-10-23 | voice | [Smart Turn v3.1 premature-turn repair](runs/2026-10-23-voice-turn-v31-endpoint-repair.json) | partial | Premature duplicate trials15/21→0/21; exactly one semantic commit each. Paused-request tails12/18→18/18; three complete-question tail errors remain. Opt-in/uninstalled. |
 | 2026-10-23 | voice | [Silero and Smart Turn production endpoint replay](runs/2026-10-23-voice-turn-production-endpoint-replay.json) | failed | 21 native trials:15 premature duplicate splits at400–1500ms protected pauses; nine unverified final tails. Candidate remains opt-in; no installation. |
 | 2026-10-23 | voice | [Silero32ms and Smart Turn v3.2 native components](runs/2026-10-23-voice-turn-native-coreml-components.json) | failed | Completed question inference median2.50ms; all six protected split-synthesized pause snapshots misclassified complete. Candidate rollout held. |
+| 2026-10-23 | voice | [Voice diagnostic compiler-cache isolation](runs/2026-10-23-voice-turn-cache-isolation.json) | partial | All7 trials commit once through SmartTurn. Five newly created compiler bundles removed after join; shared owner cache unchanged. No application source/model change. |
+| 2026-10-23 | voice | [Native ASR EOU pause diagnostic](runs/2026-10-23-voice-turn-asr-eou-diagnostic.json) | failed | Confirmed/debounced EOU still fires inside long protected pauses. Rejected as an added endpoint gate. |
 | 2026-10-23 | tts | [Qwen3-TTS0.6B4bit: serial speaker continuation](runs/2026-10-23-tts-qwen-speaker-serial.json) | blocked | No completed trial: Insufficient disk headroom for this one model. No warm acoustic median accepted. |
 | 2026-10-23 | tts | [Qwen3-TTS0.6B4bit: volume-bound serial speaker attempt](runs/2026-10-23-tts-qwen-speaker-calibrated.json) | partial | 27/30 warm pickups qualified. No warm acoustic median accepted. |
 | 2026-10-23 | tts | [Pocket: serial speaker continuation](runs/2026-10-23-tts-pocket-speaker-serial.json) | measured | 30/30 warm pickups qualified. Accepted median and p95 for this route and workload. |
@@ -20,6 +23,10 @@ Status describes the stated scope only. A measured component is not production a
 | 2026-10-23 | tts | [Kokoro: volume-bound serial speaker attempt](runs/2026-10-23-tts-kokoro-speaker-calibrated.json) | blocked | No completed trial: Insufficient disk headroom for this one model. No warm acoustic median accepted. |
 | 2026-10-23 | tts | [macOS: serial speaker continuation](runs/2026-10-23-tts-apple-speaker-serial.json) | failed | No completed trial: Disk guard stopped the owned process group before cleanup. No warm acoustic median accepted. |
 | 2026-10-23 | tts | [macOS: volume-bound serial speaker attempt](runs/2026-10-23-tts-apple-speaker-calibrated.json) | measured | 30/30 warm pickups qualified. Accepted median and p95 for this route and workload. |
+| 2026-10-23 | voice | [Smart Turn v3.2 original pause snapshots](runs/2026-10-23-smart-turn-v32-original-snapshots.json) | failed | 6/13 wrong decisions; unfinished-prefix errors 6/6. Diagnostic only. |
+| 2026-10-23 | voice | [Smart Turn v3.1 original pause snapshots](runs/2026-10-23-smart-turn-v31-original-snapshots.json) | partial | 0/13 wrong decisions; unfinished-prefix errors 0/6. Diagnostic only. |
+| 2026-10-23 | voice | [Smart Turn v3.1 native pause sweep](runs/2026-10-23-smart-turn-v31-native-quiet-sweep.json) | partial | 129 protected snapshots hold; all164 native/reference decisions agree. Three of35 final snapshots remain incomplete. Actual application endpoint replay is separate. |
+| 2026-10-23 | voice | [Smart Turn v3.0 original pause snapshots](runs/2026-10-23-smart-turn-v30-original-snapshots.json) | partial | 0/13 wrong decisions; unfinished-prefix errors 0/6. Diagnostic only. |
 | 2026-10-22 | tts | [Qwen3-TTS0.6B4bit: quiet-room speaker-output attempt](runs/2026-10-22-tts-qwen-speaker-quiet.json) | failed | No completed native-format trial: Disk guard stopped the owned process group before cleanup. No acoustic median or fastest-default decision accepted; all attempts and refusals remain retained. |
 | 2026-10-22 | tts | [Qwen3-TTS0.6B4bit: native speaker-output experiment](runs/2026-10-22-tts-qwen-speaker-output.json) | partial | 1/3 warm pickups qualified. No acoustic median or fastest-default decision accepted. Background audio was present; all attempts and refusals remain retained. |
 | 2026-10-22 | tts | [Qwen3-TTS-0.6B-CustomVoice-4bit@08c72cad5e2fd0f41730c8bd1f28149585e46361: native first generated audio](runs/2026-10-22-tts-qwen-native.json) | measured | Warm median 2709.30 ms across 5 back-to-back runs; first synthesis after preparation 3093.75 ms. Result saved, child joined and owned model removed. |
@@ -94,10 +101,10 @@ Status describes the stated scope only. A measured component is not production a
 ## Evidence by area
 
 - [Asr](inventory/asr.md): 160 evidence files.
-- [Dictation](inventory/dictation.md): 565 evidence files.
+- [Dictation](inventory/dictation.md): 566 evidence files.
 - [Meetings](inventory/meetings.md): 1143 evidence files.
 - [Agent](inventory/agent.md): 477 evidence files.
-- [Voice](inventory/voice.md): 369 evidence files.
+- [Voice](inventory/voice.md): 421 evidence files.
 - [Tts](inventory/tts.md): 362 evidence files.
 - [Workflows](inventory/workflows.md): 176 evidence files.
 - [Models](inventory/models.md): 20 evidence files.

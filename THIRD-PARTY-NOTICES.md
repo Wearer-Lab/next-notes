@@ -123,7 +123,7 @@ MLXAudioSTT product. Parakeet Redux and Ultra artifacts are by Moondream,
 converted to Core ML by Fluid Inference; their original source credits and
 licenses remain with the separately downloaded models.
 
-## Voice turn detection models (downloaded at runtime)
+## Voice turn detection models (opt-in)
 
-- [Smart Turn v3.2 CoreML](https://huggingface.co/aufklarer/Smart-Turn-v3.2-CoreML/tree/75f069717f500947195fa1945c46ddb472559cff), derived from Daily/Pipecat Smart Turn v3: BSD 2-Clause, copyright (c) 2024–2025 Daily. The export contains the raw-audio front end; its compiled files are individually pinned in `VoiceTurnModels.swift`. [Upstream licence](https://huggingface.co/aufklarer/Smart-Turn-v3.2-CoreML/blob/75f069717f500947195fa1945c46ddb472559cff/LICENSE).
+- Smart Turn v3.1 native candidate: BSD 2-Clause, copyright (c) 2024–2025 Daily. Official [v3.1 parameters](https://huggingface.co/pipecat-ai/smart-turn-v3/tree/f766f81d3cfdf7737ac64aad813d91bbfd56bf93) are reweighted into the pinned [v3.2 CoreML graph](https://huggingface.co/aufklarer/Smart-Turn-v3.2-CoreML/tree/75f069717f500947195fa1945c46ddb472559cff), preserving its raw-audio front end. `Tools/export_smart_turn_v31.py` verifies all learned tensors before replacement; `Resources/SmartTurnV31` contains the native export, licence and provenance. Compiled files are individually pinned in `VoiceTurnModels.swift`. No ONNX/Python runtime ships.
 - [Silero VAD 6.0.0, 32 ms CoreML export](https://huggingface.co/FluidInference/silero-vad-coreml/tree/b419383c55c110e2c9271fa6ee0ea83d03c70d96): MIT, Silero Team, converted by FluidInference. [Upstream licence](https://github.com/snakers4/silero-vad/blob/master/LICENSE). These weights are fetched separately; no ONNX/Python runtime is shipped.

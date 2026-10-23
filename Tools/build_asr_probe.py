@@ -12,9 +12,10 @@ def main():
     parser.add_argument("--cache", type=Path, default=Path.home() / "Library/Caches/NextNotesBuild/scratch")
     parser.add_argument("--output", type=Path, default=Path.home() / "Library/Caches/NextNotesASRBench/runtime-probe")
     parser.add_argument("--record", type=Path, required=True)
+    parser.add_argument("--source", type=Path, default=Path(__file__).with_name("ASRRuntimeBenchmark.swift"))
     args = parser.parse_args()
     build = args.cache / "arm64-apple-macosx/release"
-    source = Path(__file__).with_name("ASRRuntimeBenchmark.swift")
+    source = args.source.resolve()
     command = ["xcrun", "swiftc", "-O", "-parse-as-library", "-I", str(build / "Modules")]
     for name in ("FastClusterWrapper", "MachTaskSelfWrapper"):
         command += ["-I", str(args.cache / "checkouts/FluidAudio/Sources" / name / "include")]
