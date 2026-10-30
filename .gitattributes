@@ -1,0 +1,7 @@
+# This repo lives on a portable drive used from Windows, macOS and Ubuntu.
+# Every committed text file is LF; keep it that way on every machine so a checkout
+# on one system never shows the whole tree as modified on another.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf

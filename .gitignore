@@ -30,3 +30,29 @@ roadmap/.scratch/
 # Python developer-tool bytecode (retained locally, not application work).
 __pycache__/
 *.py[cod]
+
+# Private development material: owner-machine findings, investigations and plans.
+# Never published; this repo is public.
+private/
+
+# Portable exFAT drive moved between Windows, macOS and Ubuntu: per-OS metadata files.
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+Thumbs.db
+desktop.ini
+
+# Development reports are private by default. The benchmark evidence that is already
+# tracked stays tracked; add new public benchmark evidence deliberately with `git add -f`.
+/Tests/Reports/*
+
+# Earlier agent work products and local evidence; never published.
+/evidence/
+/backup/
+/.worktree-preservation/
+/BRIEF-*.md
+/RESULT*.md
+/LAST-MESSAGE*.txt
+/REVIEW*.md
+/codex-run*.log
